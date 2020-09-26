@@ -1,0 +1,40 @@
+name: staging
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build & Export
+        run: npm run export:staging
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: out
+          path: out
+  deploy:
+    name: deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: out
+          path: out
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy -P staging --only hosting:landing-page
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

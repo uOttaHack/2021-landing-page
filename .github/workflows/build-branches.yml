@@ -1,0 +1,19 @@
+name: branches
+on:
+  push:
+    branches:
+      - "**"
+      - "!master"
+      - "!develop"
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build
+        run: npm run export

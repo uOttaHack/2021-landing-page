@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "default": "uottahack-2021-staging",
+    "staging": "uottahack-2021-staging",
+    "production": "uottahack-2021"
+  },
+  "targets": {
+    "uottahack-2021": {
+      "hosting": {
+        "landing-page": [
+          "uottahack-2021"
+        ]
+      }
+    },
+    "uottahack-2021-staging": {
+      "hosting": {
+        "landing-page": [
+          "uottahack-2021-staging"
+        ]
+      }
+    }
+  }
+}
