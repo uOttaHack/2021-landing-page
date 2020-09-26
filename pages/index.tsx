@@ -1,9 +1,15 @@
 import { ReactElement } from "react";
+import Head from "next/head";
 
 function IndexPage(): ReactElement {
   return (
     <div>
-      <h1>Hello Next.js</h1>
+      <Head>
+        <title>uOttaHack 4</title>
+        <meta name="description" content="" />
+      </Head>
+
+      <main></main>
     </div>
   );
 }

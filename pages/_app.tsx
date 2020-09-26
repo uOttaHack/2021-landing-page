@@ -2,6 +2,8 @@ import { ReactElement, useEffect } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import useStore from "@/src/store";
+import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+import theme from "@/src/theme";
 
 function App({ Component, pageProps }: AppProps): ReactElement {
   const initAnalytics = useStore((state) => state.initAnalytics);
@@ -17,7 +19,10 @@ function App({ Component, pageProps }: AppProps): ReactElement {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <CSSReset />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
