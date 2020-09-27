@@ -1,4 +1,19 @@
 {
   "presets": ["next/babel"],
-  "plugins": []
+  "plugins": [
+    [
+      "inline-react-svg",
+      {
+        "svgo": {
+          "plugins": [
+            {
+              "cleanupIDs": {
+                "minify": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  ]
 }
