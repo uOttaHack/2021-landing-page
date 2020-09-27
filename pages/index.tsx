@@ -28,6 +28,42 @@ function IndexPage(): ReactElement {
         <FAQ />
         <Footer />
       </main>
+
+      <style jsx global>{`
+        @font-face {
+          font-family: "Inter";
+          font-weight: normal;
+          font-style: normal;
+          src: url("/fonts/inter/Inter-Regular.woff2") format("woff2"),
+            url("/fonts/inter/Inter-Regular.woff") format("woff"),
+            url("/fonts/inter/Inter-Regular.otf") format("otf"),
+            url("/fonts/inter/Inter-Regular.ttf") format("truetype");
+        }
+
+        @font-face {
+          font-family: "Inter";
+          font-weight: 500;
+          font-style: normal;
+          src: url("/fonts/inter/Inter-Medium.woff2") format("woff2"),
+            url("/fonts/inter/Inter-Medium.woff") format("woff"),
+            url("/fonts/inter/Inter-Medium.otf") format("otf"),
+            url("/fonts/inter/Inter-Medium.ttf") format("truetype");
+        }
+
+        @font-face {
+          font-family: "Gilroy";
+          font-weight: 800;
+          font-style: normal;
+          src: url("/fonts/gilroy/Gilroy-ExtraBold.otf") format("otf"),
+            url("/fonts/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+        }
+
+        @font-face {
+          font-family: "Harabara";
+          font-style: normal;
+          src: url("/fonts/harabara/Harabara.ttf") format("truetype");
+        }
+      `}</style>
     </div>
   );
 }
