@@ -1,6 +1,8 @@
 import { ReactElement } from "react";
 import Head from "next/head";
 
+import { Box } from "@chakra-ui/core";
+
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/sections/Hero";
 import TeamMessage from "@/components/sections/TeamMessage";
@@ -19,14 +21,16 @@ function IndexPage(): ReactElement {
       </Head>
 
       <main>
-        <NavBar />
-        <Hero />
-        <TeamMessage />
-        <About />
-        <HackingTracks />
-        <SponsorEvent />
-        <FAQ />
-        <Footer />
+        <Box paddingX={["0.25in", "0.5in", "0.75in", "1.25in"]}>
+          <NavBar />
+          <Hero />
+          <TeamMessage />
+          <About />
+          <HackingTracks />
+          <SponsorEvent />
+          <FAQ />
+          <Footer />
+        </Box>
       </main>
 
       <style jsx global>{`
