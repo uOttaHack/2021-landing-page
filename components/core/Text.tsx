@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
 import { Link as ChakraLink, Text } from "@chakra-ui/core";
+import theme from "@/src/theme";
 
 export const Headline = styled(Text)`
-  font-weight: bolder;
+  font-family: Gilroy;
+  font-weight: 800;
 `;
 
 export const Headline1 = styled(Headline)`
@@ -30,6 +32,7 @@ export const Headline6 = styled(Headline)`
 `;
 
 export const Body = styled(Text)`
+  font-family: Inter;
   font-weight: normal;
 `;
 
@@ -41,12 +44,26 @@ export const Body2 = styled(Body)`
   font-size: 14px;
 `;
 
+export const Button = styled(Text)`
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+`;
+
 export const Caption = styled(Text)`
+  font-family: Inter;
   font-weight: normal;
   font-size: 12px;
 `;
 
 export const Link = styled(ChakraLink)`
-  font-weight: 700;
+  font-family: Inter;
   font-size: 14px;
+  font-weight: 700;
+  color: ${theme.colors.brand.primary};
+
+  &:hover {
+    text-decoration: none;
+    color: ${theme.colors.brand.primary_variant};
+  }
 `;
