@@ -51,6 +51,16 @@ function IndexPage(): ReactElement {
         }
 
         @font-face {
+          font-family: "Inter";
+          font-weight: bold;
+          font-style: normal;
+          src: url("/fonts/inter/Inter-Bold.woff2") format("woff2"),
+            url("/fonts/inter/Inter-Bold.woff") format("woff"),
+            url("/fonts/inter/Inter-Bold.otf") format("otf"),
+            url("/fonts/inter/Inter-Bold.ttf") format("truetype");
+        }
+
+        @font-face {
           font-family: "Gilroy";
           font-weight: 800;
           font-style: normal;
