@@ -53,12 +53,7 @@ function FAQItem(props: {
           borderLeft={`4px solid ${highlightColor}`}
           padding="0px 24px 28px 24px"
         >
-          <Body2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </Body2>
+          <Body2>{props.answer}</Body2>
         </AccordionPanel>
       </AccordionItem>
     </>
