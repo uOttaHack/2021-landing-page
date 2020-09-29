@@ -40,7 +40,9 @@ function FAQItem(props: {
             )
           }
           borderLeft={`4px solid ${isOpen ? highlightColor : "transparent"}`}
-          padding="12px 24px"
+          paddingTop={isOpen ? "24px" : "12px"}
+          paddingBottom="12px"
+          paddingX="24px"
           _hover={{ borderLeft: `4px solid ${highlightColor}` }}
           _focus={{}}
         >
