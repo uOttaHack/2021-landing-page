@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { Dispatch, ReactElement, SetStateAction } from "react";
 import styled from "@emotion/styled";
 import {
   AccordionItem,
