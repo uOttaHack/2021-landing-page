@@ -5,6 +5,7 @@ import theme from "@/src/theme";
 export const Headline = styled(Text)`
   font-family: Gilroy;
   font-weight: 800;
+  color: ${theme.colors.brand.background_on};
 `;
 
 export const Headline1 = styled(Headline)`
@@ -34,6 +35,7 @@ export const Headline6 = styled(Headline)`
 export const Body = styled(Text)`
   font-family: Inter;
   font-weight: normal;
+  color: ${theme.colors.brand.background_on};
 `;
 
 export const Body1 = styled(Body)`
@@ -48,12 +50,14 @@ export const Button = styled(Text)`
   font-family: Inter;
   font-weight: 500;
   font-size: 14px;
+  color: ${theme.colors.brand.background_on};
 `;
 
 export const Caption = styled(Text)`
   font-family: Inter;
   font-weight: normal;
   font-size: 12px;
+  color: ${theme.colors.brand.background_on};
 `;
 
 export const Link = styled(ChakraLink)`

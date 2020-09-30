@@ -2,6 +2,7 @@ import create from "zustand";
 
 import * as firebase from "firebase/app";
 import "firebase/analytics";
+import "firebase/firestore";
 import firebaseConfig from "./firebaseConfig";
 
 if (!firebase.apps.length) {
@@ -11,6 +12,7 @@ if (!firebase.apps.length) {
 type State = {
   analytics: firebase.analytics.Analytics | undefined;
   initAnalytics: () => Promise<void>;
+  firestore: firebase.firestore.Firestore;
 };
 
 const useStore = create<State>((set, get) => ({
@@ -30,6 +32,7 @@ const useStore = create<State>((set, get) => ({
       }
     }
   },
+  firestore: firebase.firestore(),
 }));
 
 export default useStore;
