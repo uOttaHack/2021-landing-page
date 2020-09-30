@@ -5,7 +5,7 @@ import { FAQData } from "@/src/data";
 import { Headline4 } from "@/components/core/Text";
 
 function FAQ(): ReactElement {
-  const [currentQuestion, setCurrentQuestion] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(-1);
 
   return (
     <>
@@ -13,12 +13,13 @@ function FAQ(): ReactElement {
         Frequently Asked <br /> Questions
       </Headline4>
       <Accordion>
-        {FAQData.map((faqItem) => (
-          <Box key={faqItem.question}>
+        {FAQData.map((faqItem, index) => (
+          <Box key={index + faqItem.question}>
             <FAQItem
               {...faqItem}
-              currentQuestion={currentQuestion}
-              setCurrentQuestion={setCurrentQuestion}
+              index={index}
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
             />
           </Box>
         ))}

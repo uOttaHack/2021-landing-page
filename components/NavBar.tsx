@@ -4,11 +4,13 @@ import { Box, Flex, Link, Stack } from "@chakra-ui/core";
 import Logo from "./svgs/logo.svg";
 import MLH_Banner from "./svgs/MLH_Banner.svg";
 import HamburgerMenu from "react-hamburger-menu";
+import theme from "@/src/theme";
 
 const NavItem = styled(Link)`
   font-family: Inter;
   font-weight: bold;
   font-size: 14px;
+  color: ${theme.colors.brand.background_on};
 `;
 
 const bannerWidth = "80px";
@@ -25,7 +27,7 @@ function NavBar(): ReactElement {
             width={bannerWidth}
             position="absolute"
             right={0}
-            boxShadow="none !important"
+            _focus={{}}
             href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=black"
             isExternal
           >

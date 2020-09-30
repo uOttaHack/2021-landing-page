@@ -37,6 +37,15 @@ function IndexPage(): ReactElement {
         </Box>
       </main>
 
+      <style jsx>{`
+        main {
+          background-image: url("/images/footer.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+        }
+      `}</style>
+
       <style jsx global>{`
         @font-face {
           font-family: "Inter";

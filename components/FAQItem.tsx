@@ -18,10 +18,11 @@ const highlightColor = "#28e6a4";
 function FAQItem(props: {
   question: string;
   answer: string;
-  currentQuestion: string;
-  setCurrentQuestion: Dispatch<SetStateAction<string>>;
+  index: number;
+  currentIndex: number;
+  setCurrentIndex: Dispatch<SetStateAction<number>>;
 }): ReactElement {
-  const isOpen = props.question === props.currentQuestion;
+  const isOpen = props.index === props.currentIndex;
 
   return (
     <>
@@ -35,8 +36,8 @@ function FAQItem(props: {
       >
         <AccordionHeader
           onClick={() =>
-            props.setCurrentQuestion(
-              props.currentQuestion === props.question ? "" : props.question
+            props.setCurrentIndex(
+              props.currentIndex === props.index ? -1 : props.index
             )
           }
           borderLeft={`4px solid ${isOpen ? highlightColor : "transparent"}`}
