@@ -67,15 +67,15 @@ function Hero(): ReactElement {
           <Box w={["100%", "110%", "59%", "62.5%"]} marginTop={[16, 16, 0]}>
             <MainGraphic preserveAspectRatio="xMinYMin slice" />
           </Box>
+          <Box
+            position="absolute"
+            left={-theme.decorationOffset.x}
+            bottom={-theme.decorationOffset.y}
+            display={["none", "none", "block"]}
+          >
+            <Decoration />
+          </Box>
         </Flex>
-        <Box
-          position="absolute"
-          left={-theme.decorationOffset.x}
-          bottom={-theme.decorationOffset.y}
-          display={["none", "none", "block"]}
-        >
-          <Decoration />
-        </Box>
       </section>
     </>
   );
