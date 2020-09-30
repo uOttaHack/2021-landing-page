@@ -29,6 +29,11 @@ const theme = {
   icons: {
     ...chakraTheme.icons,
   },
+  decorationOffset: {
+    x: 190,
+    y: 202,
+  },
+  navBarOffset: 69.2,
 };
 
 export default theme;
