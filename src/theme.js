@@ -33,6 +33,7 @@ const theme = {
     x: 190,
     y: 202,
   },
+  margins: [24, 48, 72, 120],
   navBarOffset: 69.2,
 };
 
