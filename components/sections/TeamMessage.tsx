@@ -1,10 +1,12 @@
 import { ReactElement } from "react";
-import { Body2, Headline6 } from "../core/Text";
+import { Body2, Headline5 } from "../core/Text";
 import theme from "@/src/theme";
-import { Flex } from "@chakra-ui/core";
+import { Box, Flex } from "@chakra-ui/core";
+import Decoration from "@/components/Decoration";
 
 function TeamMessage(): ReactElement {
-  const headlineFontSizes = [20, 24, 34, 48];
+  const headlineFontSizes = [24, 24, 34, 48];
+  const headlineLineHeights = [1.5, 1.25, 1.1];
   const textFontSizes = [14, 14, 16];
 
   return (
@@ -17,8 +19,8 @@ function TeamMessage(): ReactElement {
           >
             Before we start, here is a message from the team:
           </Body2>
-          <Headline6
-            lineHeight={1.1}
+          <Headline5
+            lineHeight={headlineLineHeights}
             marginTop={8}
             fontSize={headlineFontSizes}
             color={theme.colors.brand.background_on}
@@ -26,9 +28,9 @@ function TeamMessage(): ReactElement {
             Due to the COVID-19 pandemic, we will be holding our event
             virtually, instead of an in-person event. The health and safety of
             our attendies is our top priority.
-          </Headline6>
-          <Headline6
-            lineHeight={1.1}
+          </Headline5>
+          <Headline5
+            lineHeight={headlineLineHeights}
             marginTop={16}
             fontSize={headlineFontSizes}
             color={theme.colors.brand.background_on}
@@ -36,16 +38,17 @@ function TeamMessage(): ReactElement {
             We will continue to monitor the situation and provide updates on our
             website and social media channels should there be any changes to our
             event.
-          </Headline6>
+          </Headline5>
           <Body2
             color={theme.colors.brand.background_on}
             fontSize={textFontSizes}
-            textAlign="center"
-            marginTop={200}
+            textAlign={["left", "left", "center"]}
+            marginTop={[8, 8, 186]}
           >
             Scroll to continue.
           </Body2>
         </Flex>
+        <Decoration side="right" viewPortFactor={2} />
       </section>
     </>
   );

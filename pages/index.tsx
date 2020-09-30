@@ -91,7 +91,7 @@ function IndexPage(): ReactElement {
           src: url("/fonts/harabara/Harabara.ttf") format("truetype");
         }
 
-        main {
+        body {
           overflow-x: hidden;
         }
       `}</style>

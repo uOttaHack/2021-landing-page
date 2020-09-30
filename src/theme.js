@@ -30,7 +30,7 @@ const theme = {
     ...chakraTheme.icons,
   },
   decorationOffset: {
-    x: 190,
+    x: 191,
     y: 202,
   },
   margins: [24, 48, 72, 120],

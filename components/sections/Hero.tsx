@@ -4,7 +4,7 @@ import { CTAButton } from "../core/Button";
 import theme from "@/src/theme";
 import MainGraphic from "../svgs/main_graphic.svg";
 import { Box, Flex } from "@chakra-ui/core";
-import Decoration from "../svgs/decoration.svg";
+import Decoration from "@/components/Decoration";
 
 function Hero(): ReactElement {
   const headlineFontSizes = [48, 48, 48, 72];
@@ -67,14 +67,7 @@ function Hero(): ReactElement {
           <Box w={["100%", "110%", "59%", "62.5%"]} marginTop={[16, 16, 0]}>
             <MainGraphic preserveAspectRatio="xMinYMin slice" />
           </Box>
-          <Box
-            position="absolute"
-            left={-theme.decorationOffset.x}
-            bottom={-theme.decorationOffset.y}
-            display={["none", "none", "block"]}
-          >
-            <Decoration />
-          </Box>
+          <Decoration side="left" viewPortFactor={1} />
         </Flex>
       </section>
     </>
