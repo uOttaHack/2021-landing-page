@@ -81,6 +81,10 @@ function IndexPage(): ReactElement {
           font-style: normal;
           src: url("/fonts/harabara/Harabara.ttf") format("truetype");
         }
+
+        main {
+          overflow-x: hidden;
+        }
       `}</style>
     </div>
   );
