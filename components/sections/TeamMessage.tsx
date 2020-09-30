@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Body2, Headline5 } from "../core/Text";
 import theme from "@/src/theme";
-import { Box, Flex } from "@chakra-ui/core";
+import { Flex } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 
 function TeamMessage(): ReactElement {
