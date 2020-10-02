@@ -11,8 +11,11 @@ function TeamMessage(): ReactElement {
 
   return (
     <>
-      <section>
-        <Flex h="100vh" w="100%" flexDirection="column" justifyContent="center">
+      <Flex
+        minHeight={["none", "none", "48em"]}
+        margin={["8em 0 ", "8em 0", "none"]}
+      >
+        <Flex w="100%" h="100%" flexDirection="column" justifyContent="center">
           <Body2
             color={theme.colors.brand.background_on}
             fontSize={textFontSizes}
@@ -43,13 +46,13 @@ function TeamMessage(): ReactElement {
             color={theme.colors.brand.background_on}
             fontSize={textFontSizes}
             textAlign={["left", "left", "center"]}
-            marginTop={[8, 8, 186]}
+            marginTop={["0.5em", "0.5em", "8em"]}
           >
             Scroll to continue.
           </Body2>
         </Flex>
         <Decoration side="right" viewPortFactor={2} />
-      </section>
+      </Flex>
     </>
   );
 }

@@ -7,16 +7,20 @@ import { Box, Flex } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 
 function Hero(): ReactElement {
-  const headlineFontSizes = [48, 48, 48, 72];
+  const headlineFontSizes = [48, 48, 48, 58, 72];
   const headlineLineHeights = [0.9, 0.9, 1];
   const textFontSizes = [14, 14, 16];
 
   return (
     <>
-      <section>
+      <Flex
+        h={["auto", "auto", "100vh"]}
+        marginTop={[20, 20, -theme.navBarOffset]}
+        minHeight={["auto", "auto", "48em"]}
+      >
         <Flex
-          h={["100%", "100%", "100vh"]}
-          marginTop={[20, 20, -theme.navBarOffset]}
+          h="100%"
+          w="100%"
           alignItems="center"
           flexDirection={["column", "column", "row", "row"]}
         >
@@ -64,12 +68,15 @@ function Hero(): ReactElement {
               </Link>
             </Flex>
           </Box>
-          <Box w={["100%", "110%", "59%", "62.5%"]} marginTop={[16, 16, 0]}>
+          <Box
+            w={["100%", "110%", "59%", "62.5%", "70%"]}
+            marginTop={[16, 32, 0]}
+          >
             <MainGraphic preserveAspectRatio="xMinYMin slice" />
           </Box>
           <Decoration side="left" viewPortFactor={1} />
         </Flex>
-      </section>
+      </Flex>
     </>
   );
 }
