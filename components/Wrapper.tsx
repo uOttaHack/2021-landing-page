@@ -1,19 +1,13 @@
 import { ReactElement } from "react";
 import { Box } from "@chakra-ui/core";
-import theme from "@/src/theme";
+import constants from "@/src/constants";
 
-interface Props {}
-
-function Wrapper(props: React.PropsWithChildren<Props>): ReactElement {
+function Wrapper(
+  props: React.PropsWithChildren<React.ReactNode>
+): ReactElement {
   return (
     <>
-      <Box
-        paddingX={theme.paddingX}
-        maxWidth={theme.maxWidth}
-        margin={theme.margin}
-      >
-        {props.children}
-      </Box>
+      <Box paddingX={constants.paddingX}>{props.children}</Box>
     </>
   );
 }
