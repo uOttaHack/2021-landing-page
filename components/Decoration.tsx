@@ -4,19 +4,23 @@ import DecorationSVG from "./svgs/decoration.svg";
 import theme from "@/src/theme";
 
 function Decoration(props: {
-  viewPortFactor: number;
-  side: string;
+  horizontalAlign: string;
+  verticalAlign: string;
 }): ReactElement {
   return (
     <>
       <Box
         position="absolute"
-        {...(props.side === "left"
+        {...(props.horizontalAlign === "left"
           ? { left: -theme.decorationOffset.x }
-          : { right: -theme.decorationOffset.x, transform: "rotate(180deg)" })}
-        top={`calc(${props.viewPortFactor * 100}vh - ${
-          theme.decorationOffset.y
-        }px)`}
+          : props.horizontalAlign === "right"
+          ? { right: -theme.decorationOffset.x, transform: "rotate(180deg)" }
+          : {})}
+        {...(props.verticalAlign === "top"
+          ? { top: -theme.decorationOffset.y }
+          : props.verticalAlign === "bottom"
+          ? { bottom: -theme.decorationOffset.y }
+          : {})}
         display={["none", "none", "block"]}
       >
         <DecorationSVG />
