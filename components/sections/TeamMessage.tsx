@@ -1,12 +1,11 @@
 import { ReactElement } from "react";
-import { Body2, Headline5 } from "../core/Text";
+import { BodyAuto, Headline5 } from "../core/Text";
 import constants from "@/src/constants";
 import { Box, Flex } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 
 const headlineFontSizes = [24, 24, 34, 48];
 const headlineLineHeights = [1.5, 1.25, 1.1];
-const textFontSizes = [14, 14, 16];
 
 function TeamMessage(): ReactElement {
   return (
@@ -20,9 +19,9 @@ function TeamMessage(): ReactElement {
             flexDirection="column"
             justifyContent="center"
           >
-            <Body2 marginBottom="12px" fontSize={textFontSizes}>
+            <BodyAuto marginBottom="12px">
               Before we start, here is a message from the team:
-            </Body2>
+            </BodyAuto>
             <Headline5
               lineHeight={headlineLineHeights}
               fontSize={headlineFontSizes}
@@ -40,13 +39,12 @@ function TeamMessage(): ReactElement {
               our website and social media channels should there be any changes
               to our event.
             </Headline5>
-            <Body2
-              fontSize={textFontSizes}
+            <BodyAuto
               textAlign={["left", "left", "center"]}
               marginTop={["24px", "24px", "8em"]}
             >
               Scroll to continue.
-            </Body2>
+            </BodyAuto>
           </Flex>
         </Flex>
         <Decoration horizontalAlign="right" verticalAlign="bottom" />

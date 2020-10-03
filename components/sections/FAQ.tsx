@@ -13,7 +13,7 @@ function FAQ(): ReactElement {
     <>
       <Wrapper>
         <Box marginTop={constants.sectionTopMargin}>
-          <Headline4 lineHeight="110%" marginBottom="40px">
+          <Headline4 marginBottom="40px">
             Frequently Asked <br /> Questions
           </Headline4>
           <Accordion>

@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Body2, Headline3, Link } from "../core/Text";
+import { BodyAuto, Headline3, Link } from "../core/Text";
 import { CTAButton } from "../core/Button";
 import constants from "@/src/constants";
 import MainGraphic from "../svgs/main_graphic.svg";
@@ -8,7 +8,6 @@ import Decoration from "@/components/Decoration";
 
 const headlineFontSizes = [48, 48, 48, 58, 72];
 const headlineLineHeights = [0.9, 0.9, 1];
-const textFontSizes = [14, 14, 16];
 
 function Hero(): ReactElement {
   return (
@@ -27,9 +26,7 @@ function Hero(): ReactElement {
             flexDirection={["column", "column", "row", "row"]}
           >
             <Box w={["100%", "100%", "41%", "37.5%"]}>
-              <Body2 paddingBottom={4} fontSize={textFontSizes}>
-                February 7-9, 2021
-              </Body2>
+              <BodyAuto paddingBottom={4}>February 7-9, 2021</BodyAuto>
               <Headline3
                 lineHeight={headlineLineHeights}
                 fontSize={headlineFontSizes}
@@ -38,9 +35,9 @@ function Hero(): ReactElement {
               >
                 Explore <br /> your limits.
               </Headline3>
-              <Body2 paddingTop={4} fontSize={textFontSizes}>
+              <BodyAuto paddingTop={4}>
                 MLH Member Event · Hosted Virtually Worldwide
-              </Body2>
+              </BodyAuto>
               <Flex
                 w="max-content"
                 marginTop={[12, 12, 16]}
