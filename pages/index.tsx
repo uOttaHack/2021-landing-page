@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import Head from "next/head";
-
 import { Box } from "@chakra-ui/core";
 
 import NavBar from "@/components/NavBar";
@@ -21,11 +20,7 @@ function IndexPage(): ReactElement {
       </Head>
 
       <main>
-        <Box
-          paddingX={["0.25in", "0.5in", "0.75in", "1.25in"]}
-          maxWidth="1640px"
-          margin="0 auto"
-        >
+        <Box maxWidth="1640px" margin="0 auto">
           <NavBar />
           <Hero />
           <TeamMessage />
@@ -89,6 +84,10 @@ function IndexPage(): ReactElement {
           font-family: "Harabara";
           font-style: normal;
           src: url("/fonts/harabara/Harabara.ttf") format("truetype");
+        }
+
+        body {
+          overflow-x: hidden;
         }
       `}</style>
     </div>
