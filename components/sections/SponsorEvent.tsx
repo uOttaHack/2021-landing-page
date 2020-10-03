@@ -4,7 +4,7 @@ import { CTAButton } from "@/components/core/Button";
 import { Body2, Headline4 } from "../core/Text";
 import { Flex, Box } from "@chakra-ui/core";
 import SponsorGraphic from "../svgs/sponsor.svg";
-import theme from "@/src/theme";
+import constants from "@/src/constants";
 
 function SponsorEvent(): ReactElement {
   return (
@@ -12,7 +12,7 @@ function SponsorEvent(): ReactElement {
       <Wrapper>
         <Flex
           minHeight={["none", "none", "48em"]}
-          marginTop={theme.marginTop}
+          marginTop={constants.sectionTopMargin}
           justifyContent="space-between"
           alignItems="center"
           flexDirection={["column-reverse", "column-reverse", "row"]}

@@ -64,7 +64,10 @@ function NavBar(): ReactElement {
                 display={["none", "none", "block", "block"]}
                 width={bannerWidth}
               />
-              <Box display={["block", "block", "none", "none"]}>
+              <Box
+                display={["block", "block", "none", "none"]}
+                cursor="pointer"
+              >
                 <HamburgerMenu
                   isOpen={isOpen}
                   menuClicked={() => setOpen(!isOpen)}
