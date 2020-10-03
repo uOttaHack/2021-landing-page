@@ -14,7 +14,7 @@ function TeamMessage(): ReactElement {
       <Box position="relative">
         <Flex
           minHeight={["none", "none", "48em"]}
-          margin={["8em 0 ", "8em 0", "none"]}
+          margin={["8em 0 0 0", "8em 0 0 0", "none"]}
         >
           <Flex
             w="100%"

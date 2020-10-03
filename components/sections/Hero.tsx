@@ -13,7 +13,7 @@ function Hero(): ReactElement {
 
   return (
     <>
-      <Box position="relative">
+      <Box position="relative" marginTop={["4em", "4em", "none"]}>
         <Flex
           h={["auto", "auto", "100vh"]}
           marginTop={[20, 20, -theme.navBarOffset]}
