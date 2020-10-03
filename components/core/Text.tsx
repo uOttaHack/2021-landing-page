@@ -22,6 +22,7 @@ export const Headline3 = styled(Headline)`
 
 export const Headline4 = styled(Headline)`
   font-size: 34px;
+  line-height: 110%;
 `;
 
 export const Headline5 = styled(Headline)`
@@ -44,6 +45,14 @@ export const Body1 = styled(Body)`
 
 export const Body2 = styled(Body)`
   font-size: 14px;
+`;
+
+export const BodyAuto = styled(Body)`
+  font-size: 14px;
+
+  @media only screen and (min-width: ${theme.breakpoints[2]}) {
+    font-size: 16px;
+  }
 `;
 
 export const Button = styled(Text)`
