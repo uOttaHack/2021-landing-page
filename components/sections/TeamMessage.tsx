@@ -12,7 +12,12 @@ function TeamMessage(): ReactElement {
     <>
       <Box position="relative">
         <Wrapper>
-          <Flex minHeight={[0, 0, "48em"]} marginTop="8em" w="100%">
+          <Flex
+            minHeight={[0, 0, "48em"]}
+            marginTop="8em"
+            w="100%"
+            alignItems="center"
+          >
             <Flex
               w="100%"
               h="100%"
