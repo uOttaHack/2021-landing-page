@@ -7,7 +7,9 @@ function Wrapper(
 ): ReactElement {
   return (
     <>
-      <Box paddingX={constants.paddingX}>{props.children}</Box>
+      <Box paddingX={constants.paddingX} maxWidth="1640px" margin="0 auto">
+        {props.children}
+      </Box>
     </>
   );
 }

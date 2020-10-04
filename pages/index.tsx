@@ -20,7 +20,7 @@ function IndexPage(): ReactElement {
       </Head>
 
       <main>
-        <Box maxWidth="1640px" margin="0 auto">
+        <Box>
           <NavBar />
           <Hero />
           <TeamMessage />
