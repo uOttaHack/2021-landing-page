@@ -22,7 +22,6 @@ export const Headline3 = styled(Headline)`
 
 export const Headline4 = styled(Headline)`
   font-size: 34px;
-  line-height: 110%;
 `;
 
 export const Headline5 = styled(Headline)`
@@ -31,6 +30,15 @@ export const Headline5 = styled(Headline)`
 
 export const Headline6 = styled(Headline)`
   font-size: 20px;
+`;
+
+export const HeadlineAuto = styled(Headline)`
+  font-size: 34px;
+  line-height: 1.25;
+
+  @media only screen and (min-width: ${theme.breakpoints[2]}) {
+    font-size: 48px;
+  }
 `;
 
 export const Body = styled(Text)`
@@ -50,7 +58,7 @@ export const Body2 = styled(Body)`
 export const BodyAuto = styled(Body)`
   font-size: 14px;
 
-  @media only screen and (min-width: ${theme.breakpoints[2]}) {
+  @media only screen and (min-width: ${theme.breakpoints[1]}) {
     font-size: 16px;
   }
 `;
