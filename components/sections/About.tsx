@@ -53,8 +53,8 @@ function About(): ReactElement {
               height={toInches(bubbleGridHeights)}
               justifyItems="center"
               alignItems="center"
-              gridTemplateColumns={"1fr ".repeat(14)}
-              gridTemplateRows={"1fr ".repeat(16)}
+              gridTemplateColumns="repeat(14, 1fr)"
+              gridTemplateRows="repeat(16, 1fr)"
               gridTemplateAreas={[
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
