@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import Wrapper from "@/components/Wrapper";
 import { CTAButton } from "@/components/core/Button";
-import { BodyAuto, Headline4 } from "../core/Text";
+import { BodyAuto, HeadlineAuto } from "../core/Text";
 import { Flex, Box } from "@chakra-ui/core";
 import SponsorGraphic from "../svgs/sponsor.svg";
 import constants from "@/src/constants";
@@ -21,10 +21,10 @@ function SponsorEvent(): ReactElement {
             marginTop={constants.sectionTopMargin}
             w={["100%", "100%", "48%"]}
           >
-            <Headline4 marginBottom="16px">
+            <HeadlineAuto marginBottom="16px">
               Sponsor a special <br />
               weekend
-            </Headline4>
+            </HeadlineAuto>
             <BodyAuto>
               Each year, our sponsors empower us to unite over 400 emerging
               developers, designers, and imaginaries. Your support make it
