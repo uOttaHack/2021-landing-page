@@ -16,6 +16,25 @@ const NavItem = styled(Box)`
   font-weight: bold;
   font-size: 14px;
   color: ${theme.colors.brand.background_on};
+  position: relative;
+
+  &:after {
+    background: ${theme.colors.brand.primary_variant};
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  &:hover::after {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
 `;
 
 const bannerWidth = "80px";
