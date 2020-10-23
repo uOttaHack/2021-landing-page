@@ -75,7 +75,7 @@ function Footer(): ReactElement {
                   marginY={footerItemMarginY}
                   marginRight={[0, 0, 0, footerItemMarginX]}
                   href="https://mlh.io/privacy"
-                  target="_blank"
+                  isExternal
                 >
                   Privacy Policy
                 </FooterLink>
@@ -83,14 +83,14 @@ function Footer(): ReactElement {
                   marginY={footerItemMarginY}
                   marginRight={[0, 0, 0, footerItemMarginX]}
                   href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
-                  target="_blank"
+                  isExternal
                 >
                   Code of Conduct
                 </FooterLink>
                 <FooterLink
                   marginY={footerItemMarginY}
                   href="https://github.com/uOttaHack"
-                  target="_blank"
+                  isExternal
                 >
                   GitHub
                 </FooterLink>
@@ -99,21 +99,21 @@ function Footer(): ReactElement {
                 <Link
                   marginX={["16px", "16px", "16px", footerItemMarginX]}
                   href="https://www.facebook.com/uottahack"
-                  target="_blank"
+                  isExternal
                 >
                   <FontAwesomeIcon width="20px" icon={faFacebookSquare} />
                 </Link>
                 <Link
                   marginX={["16px", "16px", "16px", footerItemMarginX]}
                   href="https://www.instagram.com/uottahack"
-                  target="_blank"
+                  isExternal
                 >
                   <FontAwesomeIcon width="20px" icon={faInstagram} />
                 </Link>
                 <Link
                   marginX={["16px", "16px", "16px", footerItemMarginX]}
                   href="https://twitter.com/uottahack"
-                  target="_blank"
+                  isExternal
                 >
                   <FontAwesomeIcon width="20px" icon={faTwitterSquare} />
                 </Link>
