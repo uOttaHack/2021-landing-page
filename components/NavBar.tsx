@@ -9,8 +9,9 @@ import useStore from "@/src/store";
 import { locations } from "@/src/constants";
 import Wrapper from "@/components/Wrapper";
 import NavOverlay from "@/components/NavOverlay";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const NavItem = styled(Link)`
+const NavItem = styled(Box)`
   font-family: Inter;
   font-weight: bold;
   font-size: 14px;
@@ -60,9 +61,9 @@ function NavBar(): ReactElement {
                 direction="row"
                 spacing="8vw"
               >
-                {locations.map((location) => (
-                  <NavItem key={location.href} href={location.href}>
-                    {location.label}
+                {locations.map(({ href, label }) => (
+                  <NavItem key={href} display="inline">
+                    <AnchorLink href={href}>{label}</AnchorLink>
                   </NavItem>
                 ))}
               </Stack>

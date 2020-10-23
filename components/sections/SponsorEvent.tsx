@@ -4,11 +4,11 @@ import { CTAButton } from "@/components/core/Button";
 import { BodyAuto, HeadlineAuto } from "../core/Text";
 import { Flex, Box } from "@chakra-ui/core";
 import SponsorGraphic from "../svgs/sponsor.svg";
-import { styles } from "@/src/constants";
+import { LocationHashEnum, styles } from "@/src/constants";
 
 function SponsorEvent(): ReactElement {
   return (
-    <>
+    <div id={LocationHashEnum.Sponsors}>
       <Wrapper>
         <Flex
           minHeight={["0", "0", "48em"]}
@@ -34,7 +34,7 @@ function SponsorEvent(): ReactElement {
           </Box>
         </Flex>
       </Wrapper>
-    </>
+    </div>
   );
 }
 

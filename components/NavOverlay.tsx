@@ -7,8 +7,9 @@ import { locations, socials, styles } from "@/src/constants";
 import MLH_Banner from "./svgs/MLH_Banner.svg";
 import HamburgerMenu from "react-hamburger-menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const NavItem = styled(Link)`
+const NavItem = styled(Box)`
   font-family: Inter;
   font-weight: bold;
   font-size: 16px;
@@ -25,7 +26,7 @@ function NavOverlay(): ReactElement {
       <Box
         opacity={isNavOverlayOpen ? 1 : 0}
         visibility={isNavOverlayOpen ? "visible" : "hidden"}
-        transition="opacity 0.4s, visibility 0.4s"
+        transition="opacity 0.2s, visibility 0.2s"
         position="fixed"
         zIndex={10}
         width="100%"
@@ -50,6 +51,7 @@ function NavOverlay(): ReactElement {
               href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=black"
               isExternal
               width="56px"
+              _focus={{}}
             >
               <MLH_Banner
                 width="100%"
@@ -76,11 +78,11 @@ function NavOverlay(): ReactElement {
             </Box>
           </Flex>
           <Stack marginBottom="0.4in">
-            {locations.map((location, index) => (
-              <Fragment key={location.href}>
-                <NavItem href={location.href} paddingY="8px">
-                  {location.label}
-                </NavItem>
+            {locations.map(({ href, label }, index) => (
+              <Fragment key={href}>
+                <AnchorLink href={href} style={{ padding: "8px 0px" }}>
+                  <NavItem>{label}</NavItem>
+                </AnchorLink>
                 {index !== locations.length - 1 && <Divider />}
               </Fragment>
             ))}
