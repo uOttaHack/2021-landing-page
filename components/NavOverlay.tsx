@@ -3,15 +3,10 @@ import useStore from "@/src/store";
 import styled from "@emotion/styled";
 import theme from "@/src/theme";
 import { Box, Divider, Flex, Link, Stack } from "@chakra-ui/core";
-import { locations, styles } from "@/src/constants";
+import { locations, socials, styles } from "@/src/constants";
 import MLH_Banner from "./svgs/MLH_Banner.svg";
 import HamburgerMenu from "react-hamburger-menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookSquare,
-  faInstagram,
-  faTwitterSquare,
-} from "@fortawesome/free-brands-svg-icons";
 
 const NavItem = styled(Link)`
   font-family: Inter;
@@ -51,14 +46,18 @@ function NavOverlay(): ReactElement {
           overflow="hidden"
         >
           <Flex justify="space-between" marginBottom="0.3in">
-            <Box width="56px">
+            <Link
+              href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=black"
+              isExternal
+              width="56px"
+            >
               <MLH_Banner
                 width="100%"
                 height="100%"
                 viewBox="0 0 100 175.063"
                 preserveAspectRatio="xMaxYMax"
               />
-            </Box>
+            </Link>
             <Box
               onClick={() => setNavOverlayOpen(false)}
               cursor="pointer"
@@ -95,13 +94,11 @@ function NavOverlay(): ReactElement {
               justify="center"
               align="center"
             >
-              {[faFacebookSquare, faInstagram, faTwitterSquare].map(
-                (icon, index) => (
-                  <Link key={`${index}-nav-icon`} marginX="16px">
-                    <FontAwesomeIcon width="16px" color="white" icon={icon} />
-                  </Link>
-                )
-              )}
+              {socials.map(({ href, icon }) => (
+                <Link key={href} href={href} isExternal marginX="16px">
+                  <FontAwesomeIcon width="16px" color="white" icon={icon} />
+                </Link>
+              ))}
             </Flex>
           </Flex>
         </Flex>
