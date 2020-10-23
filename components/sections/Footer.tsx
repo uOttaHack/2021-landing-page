@@ -57,7 +57,7 @@ function Footer(): ReactElement {
               <Box textAlign={["center", "center", "left", "left"]}>
                 <Wordmark>uOttaHack</Wordmark>
                 <GreyCaption marginBottom={["24px", "24px", 0]}>
-                  Canadian Capital&apos;s largest hackathon.
+                  The capital of Canada&apos;s largest hackathon.
                 </GreyCaption>
               </Box>
               <EmailInput />
@@ -74,25 +74,47 @@ function Footer(): ReactElement {
                 <FooterLink
                   marginY={footerItemMarginY}
                   marginRight={[0, 0, 0, footerItemMarginX]}
+                  href="https://mlh.io/privacy"
+                  isExternal
                 >
                   Privacy Policy
                 </FooterLink>
                 <FooterLink
                   marginY={footerItemMarginY}
                   marginRight={[0, 0, 0, footerItemMarginX]}
+                  href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+                  isExternal
                 >
                   Code of Conduct
                 </FooterLink>
-                <FooterLink marginY={footerItemMarginY}>Open Source</FooterLink>
+                <FooterLink
+                  marginY={footerItemMarginY}
+                  href="https://github.com/uOttaHack"
+                  isExternal
+                >
+                  GitHub
+                </FooterLink>
               </Flex>
               <Flex direction="row" marginY={["24px", "24px", "24px", 0]}>
-                <Link marginX={["16px", "16px", "16px", footerItemMarginX]}>
+                <Link
+                  marginX={["16px", "16px", "16px", footerItemMarginX]}
+                  href="https://www.facebook.com/uottahack"
+                  isExternal
+                >
                   <FontAwesomeIcon width="20px" icon={faFacebookSquare} />
                 </Link>
-                <Link marginX={["16px", "16px", "16px", footerItemMarginX]}>
+                <Link
+                  marginX={["16px", "16px", "16px", footerItemMarginX]}
+                  href="https://www.instagram.com/uottahack"
+                  isExternal
+                >
                   <FontAwesomeIcon width="20px" icon={faInstagram} />
                 </Link>
-                <Link marginX={["16px", "16px", "16px", footerItemMarginX]}>
+                <Link
+                  marginX={["16px", "16px", "16px", footerItemMarginX]}
+                  href="https://twitter.com/uottahack"
+                  isExternal
+                >
                   <FontAwesomeIcon width="20px" icon={faTwitterSquare} />
                 </Link>
               </Flex>
