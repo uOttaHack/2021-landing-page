@@ -4,7 +4,7 @@ import FAQItem from "@/components/FAQItem";
 import { FAQData } from "@/src/data";
 import { HeadlineAuto } from "@/components/core/Text";
 import Wrapper from "@/components/Wrapper";
-import constants from "@/src/constants";
+import { styles } from "@/src/constants";
 
 function FAQ(): ReactElement {
   const [currentIndex, setCurrentIndex] = useState(-1);
@@ -12,7 +12,7 @@ function FAQ(): ReactElement {
   return (
     <>
       <Wrapper>
-        <Box marginTop={constants.sectionTopMargin}>
+        <Box marginTop={styles.sectionTopMargin}>
           <HeadlineAuto marginBottom="40px">
             Frequently Asked
             <br />

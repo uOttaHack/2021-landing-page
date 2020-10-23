@@ -1,11 +1,14 @@
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import styled from "@emotion/styled";
 import { Box, Flex, Link, Stack } from "@chakra-ui/core";
 import Logo from "./svgs/logo.svg";
 import MLH_Banner from "./svgs/MLH_Banner.svg";
 import HamburgerMenu from "react-hamburger-menu";
 import theme from "@/src/theme";
+import useStore from "@/src/store";
+import { locations } from "@/src/constants";
 import Wrapper from "@/components/Wrapper";
+import NavOverlay from "@/components/NavOverlay";
 
 const NavItem = styled(Link)`
   font-family: Inter;
@@ -17,13 +20,14 @@ const NavItem = styled(Link)`
 const bannerWidth = "80px";
 
 function NavBar(): ReactElement {
-  const [isOpen, setOpen] = useState(false);
+  const setNavOverlayOpen = useStore((state) => state.setNavOverlayOpen);
 
   return (
     <>
+      <NavOverlay />
       <Wrapper>
         <header>
-          <Box position="relative" zIndex={99}>
+          <Box position="relative" zIndex={1}>
             <Box position="relative">
               <Link
                 display={["none", "none", "block", "block"]}
@@ -56,9 +60,11 @@ function NavBar(): ReactElement {
                 direction="row"
                 spacing="8vw"
               >
-                <NavItem>About</NavItem>
-                <NavItem>Sponsors</NavItem>
-                <NavItem>FAQ</NavItem>
+                {locations.map((location) => (
+                  <NavItem key={location.href} href={location.href}>
+                    {location.label}
+                  </NavItem>
+                ))}
               </Stack>
               <Box
                 display={["none", "none", "block", "block"]}
@@ -69,8 +75,8 @@ function NavBar(): ReactElement {
                 cursor="pointer"
               >
                 <HamburgerMenu
-                  isOpen={isOpen}
-                  menuClicked={() => setOpen(!isOpen)}
+                  isOpen={false}
+                  menuClicked={() => setNavOverlayOpen(true)}
                   height={18}
                   width={28}
                   strokeWidth={3}

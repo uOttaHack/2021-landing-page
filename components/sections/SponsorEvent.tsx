@@ -4,7 +4,7 @@ import { CTAButton } from "@/components/core/Button";
 import { BodyAuto, HeadlineAuto } from "../core/Text";
 import { Flex, Box } from "@chakra-ui/core";
 import SponsorGraphic from "../svgs/sponsor.svg";
-import constants from "@/src/constants";
+import { styles } from "@/src/constants";
 
 function SponsorEvent(): ReactElement {
   return (
@@ -12,15 +12,12 @@ function SponsorEvent(): ReactElement {
       <Wrapper>
         <Flex
           minHeight={["0", "0", "48em"]}
-          marginTop={constants.sectionTopMargin}
+          marginTop={styles.sectionTopMargin}
           justifyContent="space-between"
           alignItems="center"
           flexDirection={["column-reverse", "column-reverse", "row"]}
         >
-          <Box
-            marginTop={constants.sectionTopMargin}
-            w={["100%", "100%", "48%"]}
-          >
+          <Box marginTop={styles.sectionTopMargin} w={["100%", "100%", "48%"]}>
             <HeadlineAuto marginBottom="16px">
               Sponsor a special <br />
               weekend
