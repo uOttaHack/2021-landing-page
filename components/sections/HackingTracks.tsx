@@ -1,11 +1,14 @@
 import { ReactElement } from "react";
 import { Box, Flex, Grid, Image } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
-import { BodyAuto, HeadlineAuto } from "@/components/core/Text";
+import { BodyAuto, HeadlineAuto, Headline  } from "@/components/core/Text";
+import theme from "@/src/theme";
 
 const toInches = (sizes: number[]) => sizes.map((size) => `${size}in`);
 const bubbleGridWidths = [2.5, 4, 3, 3.5, 4.5];
 const bubbleGridHeights = bubbleGridWidths.map((width) => (width * 8) / 7);
+const headlineFontSizes = [16, 20, 22, 24];
+const headlineFontSizesSmall = [14, 16, 18, 20];
 
 const tempGreenImg =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUWlHxHwAEWQI7NLZUaQAAAABJRU5ErkJggg==";
@@ -50,13 +53,13 @@ function HackingTracks(): ReactElement {
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . a . . .`,
+                `. . . . . . . . . a . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
-                `. . . b . . . . . . . . . .`,
+                `. . b . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
@@ -67,27 +70,58 @@ function HackingTracks(): ReactElement {
                 .map((row) => `"${row}"`)
                 .join(" ")}
             >
-              <Image
-              gridArea="b"
-              height="750%"
-                maxWidth="750%"
-                rounded="full"
-                src={tempGreenImg}
-              />
-              <Image
+              <Flex
+                gridArea="b"
+                height="750%"
+                width="750%" 
+                position="relative"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Headline position="absolute" fontSize={headlineFontSizes} color={theme.colors.brand.background + " !important"}>FinTech</Headline>
+                <Image
+                  gridArea="b"
+                  height="100%"
+                  maxWidth="100%"
+                  rounded="full"
+                  src={tempGreenImg}
+                />
+              </Flex>
+              <Flex
                 gridArea="a"
-                height="600%"
-                maxWidth="600%"
-                rounded="full"
-                src={tempGreenImg}
-              />
-              <Image
+                height="700%"
+                width="700%" 
+                position="relative"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Headline position="absolute" fontSize={headlineFontSizes} color={theme.colors.brand.background + " !important"}>HealthTech</Headline>
+                <Image
+                  gridArea="a"
+                  height="100%"
+                  maxWidth="100%"
+                  rounded="full"
+                  src={tempGreenImg}
+                />
+
+              </Flex>
+              <Flex
                 gridArea="c"
-                height="500%"
-                maxWidth="500%"
-                rounded="full"
-                src={tempGreenImg}
-              />
+                height="650%"
+                width="650%" 
+                position="relative"
+                alignItems="center"
+                justifyContent="center"
+              >
+              <Headline position="absolute" fontSize={headlineFontSizesSmall} color={theme.colors.brand.background + " !important"}>Smart Delivery</Headline>
+                <Image
+                  gridArea="c"
+                  height="100%"
+                  maxWidth="100%"
+                  rounded="full"
+                  src={tempGreenImg}
+                />
+              </Flex>
             </Grid>
           </Box>
         </Flex>
