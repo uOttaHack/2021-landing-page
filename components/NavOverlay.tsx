@@ -21,9 +21,14 @@ function NavOverlay(): ReactElement {
   const isNavOverlayOpen = useStore((state) => state.isNavOverlayOpen);
   const setNavOverlayOpen = useStore((state) => state.setNavOverlayOpen);
 
+  const handleNavLinkClick = () => {
+    setNavOverlayOpen(false);
+  };
+
   return (
     <>
       <Box
+        display={["block", "block", "none", "none"]}
         opacity={isNavOverlayOpen ? 1 : 0}
         visibility={isNavOverlayOpen ? "visible" : "hidden"}
         transition="opacity 0.2s, visibility 0.2s"
@@ -80,10 +85,14 @@ function NavOverlay(): ReactElement {
           <Stack marginBottom="0.4in">
             {locations.map(({ href, label }, index) => (
               <Fragment key={href}>
-                <AnchorLink href={href} style={{ padding: "8px 0px" }}>
+                {index !== 0 && <Divider />}
+                <AnchorLink
+                  href={href}
+                  style={{ padding: "8px 0px" }}
+                  onClick={handleNavLinkClick}
+                >
                   <NavItem>{label}</NavItem>
                 </AnchorLink>
-                {index !== locations.length - 1 && <Divider />}
               </Fragment>
             ))}
           </Stack>
