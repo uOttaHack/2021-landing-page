@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { Box, Flex, Grid, Image } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
 import { BodyAuto, HeadlineAuto } from "@/components/core/Text";
+import { LocationHashEnum } from "@/src/constants";
 
 const toInches = (sizes: number[]) => sizes.map((size) => `${size}in`);
 const bubbleGridWidths = [2.5, 4, 3, 3.5, 4.5];
@@ -12,7 +13,7 @@ const tempGreenImg =
 
 function About(): ReactElement {
   return (
-    <>
+    <div id={LocationHashEnum.About}>
       <Wrapper>
         <Flex
           marginTop="8em"
@@ -108,7 +109,7 @@ function About(): ReactElement {
           </Box>
         </Flex>
       </Wrapper>
-    </>
+    </div>
   );
 }
 

@@ -13,6 +13,8 @@ type State = {
   analytics: firebase.analytics.Analytics | undefined;
   initAnalytics: () => Promise<void>;
   firestore: firebase.firestore.Firestore;
+  isNavOverlayOpen: boolean;
+  setNavOverlayOpen: (isOpen: boolean) => void;
 };
 
 const useStore = create<State>((set, get) => ({
@@ -33,6 +35,8 @@ const useStore = create<State>((set, get) => ({
     }
   },
   firestore: firebase.firestore(),
+  isNavOverlayOpen: false,
+  setNavOverlayOpen: (isOpen) => set({ isNavOverlayOpen: isOpen }),
 }));
 
 export default useStore;

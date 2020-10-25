@@ -4,12 +4,8 @@ import { Box, Divider, Flex, Link } from "@chakra-ui/core";
 import { Headline, Body, Caption } from "@/components/core/Text";
 import EmailInput from "@/components/EmailInput";
 import theme from "@/src/theme";
+import { socials } from "@/src/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookSquare,
-  faInstagram,
-  faTwitterSquare,
-} from "@fortawesome/free-brands-svg-icons";
 import Wrapper from "@/components/Wrapper";
 
 const Wordmark = styled(Headline)`
@@ -96,27 +92,16 @@ function Footer(): ReactElement {
                 </FooterLink>
               </Flex>
               <Flex direction="row" marginY={["24px", "24px", "24px", 0]}>
-                <Link
-                  marginX={["16px", "16px", "16px", footerItemMarginX]}
-                  href="https://www.facebook.com/uottahack"
-                  isExternal
-                >
-                  <FontAwesomeIcon width="20px" icon={faFacebookSquare} />
-                </Link>
-                <Link
-                  marginX={["16px", "16px", "16px", footerItemMarginX]}
-                  href="https://www.instagram.com/uottahack"
-                  isExternal
-                >
-                  <FontAwesomeIcon width="20px" icon={faInstagram} />
-                </Link>
-                <Link
-                  marginX={["16px", "16px", "16px", footerItemMarginX]}
-                  href="https://twitter.com/uottahack"
-                  isExternal
-                >
-                  <FontAwesomeIcon width="20px" icon={faTwitterSquare} />
-                </Link>
+                {socials.map(({ href, icon }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    isExternal
+                    marginX={["16px", "16px", "16px", footerItemMarginX]}
+                  >
+                    <FontAwesomeIcon width="20px" icon={icon} />
+                  </Link>
+                ))}
               </Flex>
               <FooterText>Presented by The uOttaHack Team</FooterText>
             </Flex>

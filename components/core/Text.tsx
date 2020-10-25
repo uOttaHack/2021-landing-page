@@ -82,6 +82,7 @@ export const Link = styled(ChakraLink)`
   font-size: 14px;
   font-weight: 700;
   color: ${theme.colors.brand.primary};
+  box-shadow: none !important;
 
   &:hover {
     text-decoration: none;
