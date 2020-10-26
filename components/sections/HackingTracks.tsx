@@ -7,8 +7,6 @@ import theme from "@/src/theme";
 const toInches = (sizes: number[]) => sizes.map((size) => `${size}in`);
 const bubbleGridWidths = [2.5, 4, 3, 3.5, 4.5];
 const bubbleGridHeights = bubbleGridWidths.map((width) => (width * 8) / 7);
-const headlineFontSizes = [16, 20, 22, 24];
-const headlineFontSizesSmall = [14, 16, 18, 20];
 
 const tempGreenImg =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUWlHxHwAEWQI7NLZUaQAAAABJRU5ErkJggg==";
@@ -53,18 +51,18 @@ function HackingTracks(): ReactElement {
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . a . . . .`,
+                `. . . . . . . . . . a . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . b . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
+                `. . . b . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . c . . .`,
+                `. . . . . . . . . . . . . .`,
+                `. . . . . . . . . . . c . .`,
+                `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
               ]
                 .map((row) => `"${row}"`)
@@ -72,13 +70,13 @@ function HackingTracks(): ReactElement {
             >
               <Flex
                 gridArea="b"
-                height="750%"
-                width="750%" 
+                height="700%"
+                width="700%" 
                 position="relative"
                 alignItems="center"
                 justifyContent="center"
               >
-                <Headline position="absolute" fontSize={headlineFontSizes} color={theme.colors.brand.background + " !important"}>FinTech</Headline>
+                <Headline position="absolute" fontSize={[14, 16, 18, 20]} color={theme.colors.brand.background + " !important"}>FinTech</Headline>
                 <Image
                   gridArea="b"
                   height="100%"
@@ -89,13 +87,13 @@ function HackingTracks(): ReactElement {
               </Flex>
               <Flex
                 gridArea="a"
-                height="700%"
-                width="700%" 
+                height="600%"
+                width="600%" 
                 position="relative"
                 alignItems="center"
                 justifyContent="center"
               >
-                <Headline position="absolute" fontSize={headlineFontSizes} color={theme.colors.brand.background + " !important"}>HealthTech</Headline>
+                <Headline position="absolute" fontSize={[12, 14, 16, 18]} color={theme.colors.brand.background + " !important"}>HealthTech</Headline>
                 <Image
                   gridArea="a"
                   height="100%"
@@ -107,13 +105,13 @@ function HackingTracks(): ReactElement {
               </Flex>
               <Flex
                 gridArea="c"
-                height="650%"
-                width="650%" 
+                height="500%"
+                width="500%" 
                 position="relative"
                 alignItems="center"
                 justifyContent="center"
               >
-              <Headline position="absolute" fontSize={headlineFontSizesSmall} color={theme.colors.brand.background + " !important"}>Smart Delivery</Headline>
+              <Headline position="absolute" fontSize={[10, 12, 12, 16]} color={theme.colors.brand.background + " !important"}>Smart Delivery</Headline>
                 <Image
                   gridArea="c"
                   height="100%"
