@@ -61,7 +61,7 @@ function HackingTracks(): ReactElement {
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . c . .`,
+                `. . . . . . . . . . c . . .`,
                 `. . . . . . . . . . . . . .`,
                 `. . . . . . . . . . . . . .`,
               ]
@@ -76,7 +76,7 @@ function HackingTracks(): ReactElement {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Headline position="absolute" fontSize={[14, 16, 18, 20]} color={theme.colors.brand.background + " !important"}>FinTech</Headline>
+                <Headline position="absolute" fontSize={[12.8, 12.8, 16, 20]} color={theme.colors.brand.background + " !important"}>FinTech</Headline>
                 <Image
                   gridArea="b"
                   height="100%"
@@ -93,7 +93,7 @@ function HackingTracks(): ReactElement {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Headline position="absolute" fontSize={[12, 14, 16, 18]} color={theme.colors.brand.background + " !important"}>HealthTech</Headline>
+                <Headline position="absolute" fontSize={[12.8, 12.8, 12.8, 16]} color={theme.colors.brand.background + " !important"}>HealthTech</Headline>
                 <Image
                   gridArea="a"
                   height="100%"
@@ -111,7 +111,7 @@ function HackingTracks(): ReactElement {
                 alignItems="center"
                 justifyContent="center"
               >
-              <Headline position="absolute" fontSize={[10, 12, 12, 16]} color={theme.colors.brand.background + " !important"}>Smart Delivery</Headline>
+              <Headline position="absolute" fontSize={[10.25, 10.25, 10.25, 12.8]} color={theme.colors.brand.background + " !important"}>Smart Delivery</Headline>
                 <Image
                   gridArea="c"
                   height="100%"
