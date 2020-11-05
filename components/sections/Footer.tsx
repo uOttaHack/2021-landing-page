@@ -4,12 +4,8 @@ import { Box, Divider, Flex, Link } from "@chakra-ui/core";
 import { Headline, Body, Caption } from "@/components/core/Text";
 import EmailInput from "@/components/EmailInput";
 import theme from "@/src/theme";
+import { socials } from "@/src/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookSquare,
-  faInstagram,
-  faTwitterSquare,
-} from "@fortawesome/free-brands-svg-icons";
 import Wrapper from "@/components/Wrapper";
 
 const Wordmark = styled(Headline)`
@@ -57,7 +53,7 @@ function Footer(): ReactElement {
               <Box textAlign={["center", "center", "left", "left"]}>
                 <Wordmark>uOttaHack</Wordmark>
                 <GreyCaption marginBottom={["24px", "24px", 0]}>
-                  Canadian Capital&apos;s largest hackathon.
+                  The capital of Canada&apos;s largest hackathon.
                 </GreyCaption>
               </Box>
               <EmailInput />
@@ -74,27 +70,38 @@ function Footer(): ReactElement {
                 <FooterLink
                   marginY={footerItemMarginY}
                   marginRight={[0, 0, 0, footerItemMarginX]}
+                  href="https://mlh.io/privacy"
+                  isExternal
                 >
                   Privacy Policy
                 </FooterLink>
                 <FooterLink
                   marginY={footerItemMarginY}
                   marginRight={[0, 0, 0, footerItemMarginX]}
+                  href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+                  isExternal
                 >
                   Code of Conduct
                 </FooterLink>
-                <FooterLink marginY={footerItemMarginY}>Open Source</FooterLink>
+                <FooterLink
+                  marginY={footerItemMarginY}
+                  href="https://github.com/uOttaHack"
+                  isExternal
+                >
+                  GitHub
+                </FooterLink>
               </Flex>
               <Flex direction="row" marginY={["24px", "24px", "24px", 0]}>
-                <Link marginX={["16px", "16px", "16px", footerItemMarginX]}>
-                  <FontAwesomeIcon width="20px" icon={faFacebookSquare} />
-                </Link>
-                <Link marginX={["16px", "16px", "16px", footerItemMarginX]}>
-                  <FontAwesomeIcon width="20px" icon={faInstagram} />
-                </Link>
-                <Link marginX={["16px", "16px", "16px", footerItemMarginX]}>
-                  <FontAwesomeIcon width="20px" icon={faTwitterSquare} />
-                </Link>
+                {socials.map(({ href, icon }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    isExternal
+                    marginX={["16px", "16px", "16px", footerItemMarginX]}
+                  >
+                    <FontAwesomeIcon width="20px" icon={icon} />
+                  </Link>
+                ))}
               </Flex>
               <FooterText>Presented by The uOttaHack Team</FooterText>
             </Flex>

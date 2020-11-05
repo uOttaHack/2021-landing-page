@@ -22,6 +22,7 @@ const theme = {
       error_on: "#F8FEFC",
       actionable: "#1890FF",
       warning: "#FAAD14",
+      dark_green: "#003224",
     },
   },
   fonts,

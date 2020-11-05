@@ -1,29 +1,53 @@
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import styled from "@emotion/styled";
 import { Box, Flex, Link, Stack } from "@chakra-ui/core";
 import Logo from "./svgs/logo.svg";
 import MLH_Banner from "./svgs/MLH_Banner.svg";
 import HamburgerMenu from "react-hamburger-menu";
 import theme from "@/src/theme";
+import useStore from "@/src/store";
+import { locations } from "@/src/constants";
 import Wrapper from "@/components/Wrapper";
+import NavOverlay from "@/components/NavOverlay";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const NavItem = styled(Link)`
+const NavItem = styled(Box)`
   font-family: Inter;
   font-weight: bold;
   font-size: 14px;
   color: ${theme.colors.brand.background_on};
+  position: relative;
+
+  &:after {
+    background: ${theme.colors.brand.primary_variant};
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  &:hover::after {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
 `;
 
 const bannerWidth = "80px";
 
 function NavBar(): ReactElement {
-  const [isOpen, setOpen] = useState(false);
+  const setNavOverlayOpen = useStore((state) => state.setNavOverlayOpen);
 
   return (
     <>
+      <NavOverlay />
       <Wrapper>
         <header>
-          <Box position="relative" zIndex={99}>
+          <Box position="relative" zIndex={1}>
             <Box position="relative">
               <Link
                 display={["none", "none", "block", "block"]}
@@ -56,9 +80,11 @@ function NavBar(): ReactElement {
                 direction="row"
                 spacing="8vw"
               >
-                <NavItem>About</NavItem>
-                <NavItem>Sponsors</NavItem>
-                <NavItem>FAQ</NavItem>
+                {locations.map(({ href, label }) => (
+                  <NavItem key={href} display="inline">
+                    <AnchorLink href={href}>{label}</AnchorLink>
+                  </NavItem>
+                ))}
               </Stack>
               <Box
                 display={["none", "none", "block", "block"]}
@@ -69,8 +95,8 @@ function NavBar(): ReactElement {
                 cursor="pointer"
               >
                 <HamburgerMenu
-                  isOpen={isOpen}
-                  menuClicked={() => setOpen(!isOpen)}
+                  isOpen={false}
+                  menuClicked={() => setNavOverlayOpen(true)}
                   height={18}
                   width={28}
                   strokeWidth={3}

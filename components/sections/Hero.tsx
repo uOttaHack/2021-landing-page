@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { BodyAuto, Headline3, Link } from "../core/Text";
 import { CTAButton } from "../core/Button";
-import constants from "@/src/constants";
+import { styles } from "@/src/constants";
 import MainGraphic from "../svgs/main_graphic.svg";
 import { Box, Flex } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
@@ -17,7 +17,7 @@ function Hero(): ReactElement {
         <Wrapper>
           <Flex
             h={["auto", "auto", "100vh"]}
-            marginTop={[20, 20, -constants.navBarOffset]}
+            marginTop={[20, 20, -styles.navBarOffset]}
             minHeight={["auto", "auto", "48em"]}
           >
             <Flex
