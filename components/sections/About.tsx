@@ -79,7 +79,7 @@ function About(): ReactElement {
                 maxWidth="500%"
                 rounded="full"
                 objectFit="cover"
-                src="https://scontent.fxds1-1.fna.fbcdn.net/v/t1.0-0/p640x640/89151459_910475549407542_4149718717594337280_o.jpg?_nc_cat=104&_nc_sid=e007fa&_nc_ohc=Caw1Ld8QwbwAX9RFubd&_nc_ht=scontent.fxds1-1.fna&tp=6&oh=7dfb708f206c2051863b6d29199e6525&oe=5FAB42DB"
+                src="/images/2020a.jpg"
               />
               <Image
                 gridArea="b"
@@ -87,7 +87,7 @@ function About(): ReactElement {
                 maxWidth="800%"
                 rounded="full"
                 objectFit="cover"
-                src="https://scontent.fxds1-1.fna.fbcdn.net/v/t1.0-0/p640x640/89097625_910470802741350_7505724141698285568_o.jpg?_nc_cat=106&_nc_sid=e007fa&_nc_ohc=mg4aim3P_HgAX_xkx4g&_nc_ht=scontent.fxds1-1.fna&tp=6&oh=7e336a898095031e272aa2dce4f17239&oe=5FA91DF1"
+                src="/images/2020b.jpg"
               />
               <Image
                 gridArea="c"
@@ -95,7 +95,7 @@ function About(): ReactElement {
                 maxWidth="650%"
                 rounded="full"
                 objectFit="cover"
-                src="https://scontent.fxds1-1.fna.fbcdn.net/v/t1.0-0/p640x640/89036407_910478866073877_2735373870918795264_o.jpg?_nc_cat=100&_nc_sid=e007fa&_nc_ohc=Ejp1B2ktLiUAX-T9VoF&_nc_ht=scontent.fxds1-1.fna&tp=6&oh=2b5116ccf3ccc691718c09f0f42772d4&oe=5FA9A22D"
+                src="/images/2020c.jpg"
               />
               <Image
                 gridArea="d"
@@ -103,7 +103,7 @@ function About(): ReactElement {
                 maxWidth="450%"
                 rounded="full"
                 objectFit="cover"
-                src="https://scontent.fxds1-1.fna.fbcdn.net/v/t1.0-0/p640x640/89069297_910489586072805_8413874236040413184_o.jpg?_nc_cat=102&_nc_sid=e007fa&_nc_ohc=DS-8EqTNNRsAX9QPXL0&_nc_ht=scontent.fxds1-1.fna&tp=6&oh=f5fae5db7cd6bc8969e45567eec3a5f9&oe=5FAA605C"
+                src="/images/2020d.jpg"
               />
             </Grid>
           </Box>
