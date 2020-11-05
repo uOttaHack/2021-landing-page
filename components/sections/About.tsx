@@ -8,9 +8,6 @@ const toInches = (sizes: number[]) => sizes.map((size) => `${size}in`);
 const bubbleGridWidths = [2.5, 4, 3, 3.5, 4.5];
 const bubbleGridHeights = bubbleGridWidths.map((width) => (width * 8) / 7);
 
-const tempGreenImg =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUWlHxHwAEWQI7NLZUaQAAAABJRU5ErkJggg==";
-
 function About(): ReactElement {
   return (
     <div id={LocationHashEnum.About}>
@@ -82,28 +79,32 @@ function About(): ReactElement {
                 height="500%"
                 maxWidth="500%"
                 rounded="full"
-                src={tempGreenImg}
+                objectFit="cover"
+                src="/images/2020a.jpg"
               />
               <Image
                 gridArea="b"
                 height="800%"
                 maxWidth="800%"
                 rounded="full"
-                src={tempGreenImg}
+                objectFit="cover"
+                src="/images/2020b.jpg"
               />
               <Image
                 gridArea="c"
                 height="650%"
                 maxWidth="650%"
                 rounded="full"
-                src={tempGreenImg}
+                objectFit="cover"
+                src="/images/2020c.jpg"
               />
               <Image
                 gridArea="d"
                 height="450%"
                 maxWidth="450%"
                 rounded="full"
-                src={tempGreenImg}
+                objectFit="cover"
+                src="/images/2020d.jpg"
               />
             </Grid>
           </Box>
