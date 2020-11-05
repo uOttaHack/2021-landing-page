@@ -16,7 +16,10 @@ function IndexPage(): ReactElement {
     <div>
       <Head>
         <title>uOttaHack 4</title>
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="Explore your limits at uOttaHack. Hosted at the University of Ottawa, uOttaHack is Ottawa's largest hackathon and this year will be its most exciting iteration yet! To commemorate this special milestone, uOttaHack 4 is expanding the hacker experience with new initiatives to create an unforgettable weekend for its hackers."
+        />
       </Head>
 
       <main>
