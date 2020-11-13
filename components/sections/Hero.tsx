@@ -2,13 +2,23 @@ import { ReactElement } from "react";
 import { BodyAuto, Headline3, Link } from "../core/Text";
 import { CTAButton } from "../core/Button";
 import { styles } from "@/src/constants";
-import MainGraphic from "../svgs/main_graphic.svg";
 import { Box, Flex } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 import Wrapper from "@/components/Wrapper";
+import Lottie from "react-lottie";
+import animationData from "@/src/hero-lottie.json";
 
 const headlineFontSizes = [48, 48, 48, 58, 72];
 const headlineLineHeights = [0.9, 0.9, 1];
+
+const lottieOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 function Hero(): ReactElement {
   return (
@@ -59,7 +69,11 @@ function Hero(): ReactElement {
                 w={["100%", "110%", "59%", "62.5%", "70%"]}
                 marginTop={[16, 32, 0]}
               >
-                <MainGraphic preserveAspectRatio="xMinYMin slice" />
+                <Lottie
+                  options={lottieOptions}
+                  isClickToPauseDisabled
+                  ariaRole="img"
+                />
               </Box>
             </Flex>
           </Flex>
