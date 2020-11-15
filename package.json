@@ -20,6 +20,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.31",
     "@fortawesome/free-brands-svg-icons": "^5.15.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@types/react-lottie": "^1.2.5",
     "emotion-theming": "^10.0.27",
     "firebase": "^7.21.1",
     "next": "^9.5.3",

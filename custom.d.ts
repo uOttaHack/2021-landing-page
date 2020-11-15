@@ -6,5 +6,3 @@ declare module "*.svg" {
 declare module "react-hamburger-menu";
 
 declare module "react-anchor-link-smooth-scroll";
-
-declare module "react-lottie";
