@@ -10,14 +10,9 @@ const headlineLineHeights = [1.5, 1.25, 1.1];
 function TeamMessage(): ReactElement {
   return (
     <>
-      <Box position="relative">
+      <Box position="relative" width="100%">
         <Wrapper>
-          <Flex
-            minHeight={[0, 0, "48em"]}
-            marginTop="8em"
-            w="100%"
-            alignItems="center"
-          >
+          <Flex minHeight={[0, 0, "48em"]} w="100%" alignItems="center">
             <Flex
               w="100%"
               h="100%"

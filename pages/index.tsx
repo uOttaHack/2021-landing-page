@@ -10,6 +10,7 @@ import HackingTracks from "@/components/sections/HackingTracks";
 import SponsorEvent from "@/components/sections/SponsorEvent";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
+import AnimatedSection from "@/components/sections/AnimatedSection";
 
 function IndexPage(): ReactElement {
   return (
@@ -26,9 +27,11 @@ function IndexPage(): ReactElement {
         <Box>
           <NavBar />
           <Hero />
-          <TeamMessage />
-          <About />
-          <HackingTracks />
+          <AnimatedSection>
+            <TeamMessage />
+            <About />
+            <HackingTracks />
+          </AnimatedSection>
           <SponsorEvent />
           <FAQ />
           <Footer />
