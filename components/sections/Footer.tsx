@@ -19,7 +19,7 @@ const GreyCaption = styled(Caption)`
   color: grey;
 `;
 
-const footerItemMarginX = "1.5vw";
+const footerItemMarginX = "32px";
 const footerItemMarginY = ["16px", "16px", "16px", 0];
 
 const FooterLink = styled(Link)`
@@ -40,7 +40,7 @@ function Footer(): ReactElement {
         <footer>
           <Box paddingBottom="30vw">
             <Divider
-              marginTop={["2in", "2.5in", "2.5in", "3in"]}
+              marginTop={["1in", "1.5in", "2in", "2.5in"]}
               marginBottom={["0.4in", "0.6in", "0.8in", "1in"]}
               borderColor="#dbdbdb"
             />
@@ -97,7 +97,13 @@ function Footer(): ReactElement {
                     key={href}
                     href={href}
                     isExternal
-                    marginX={["16px", "16px", "16px", footerItemMarginX]}
+                    marginX={[
+                      "16px",
+                      "16px",
+                      "16px",
+                      "16px",
+                      footerItemMarginX,
+                    ]}
                   >
                     <FontAwesomeIcon width="20px" icon={icon} />
                   </Link>

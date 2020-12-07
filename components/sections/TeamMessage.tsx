@@ -13,8 +13,8 @@ function TeamMessage(): ReactElement {
       <Box position="relative">
         <Wrapper>
           <Flex
-            minHeight={[0, 0, "48em"]}
-            marginTop="8em"
+            marginTop="10em"
+            paddingBottom={[0, 0, "8em"]}
             w="100%"
             alignItems="center"
           >
@@ -44,12 +44,6 @@ function TeamMessage(): ReactElement {
                 our website and social media channels should there be any
                 changes to our event.
               </Headline5>
-              <BodyAuto
-                textAlign={["left", "left", "center"]}
-                marginTop={["24px", "24px", "8em"]}
-              >
-                Scroll to continue.
-              </BodyAuto>
             </Flex>
           </Flex>
         </Wrapper>

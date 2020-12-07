@@ -6,7 +6,7 @@ import NavBar from "@/components/NavBar";
 import Hero from "@/components/sections/Hero";
 import TeamMessage from "@/components/sections/TeamMessage";
 import About from "@/components/sections/About";
-import HackingTracks from "@/components/sections/HackingTracks";
+import SponsorShowcase from "@/components/sections/SponsorShowcase";
 import SponsorEvent from "@/components/sections/SponsorEvent";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
@@ -18,7 +18,7 @@ function IndexPage(): ReactElement {
         <title>uOttaHack 4</title>
         <meta
           name="description"
-          content="Explore your limits at uOttaHack. Hosted at the University of Ottawa, uOttaHack is Ottawa's largest hackathon and this year will be its most exciting iteration yet! To commemorate this special milestone, uOttaHack 4 is expanding the hacker experience with new initiatives to create an unforgettable weekend for its hackers."
+          content="uOttaHack is uOttawa's largest hackathon and this year will be its more exciting iteration yet! To commemorate this special milestone, uOttaHack 4 is expanding the hacker experience with new initiatives to create an unforgettable weekend for its hackers, VIRTUALLY!"
         />
       </Head>
 
@@ -28,8 +28,8 @@ function IndexPage(): ReactElement {
           <Hero />
           <TeamMessage />
           <About />
-          <HackingTracks />
           <SponsorEvent />
+          <SponsorShowcase />
           <FAQ />
           <Footer />
         </Box>
