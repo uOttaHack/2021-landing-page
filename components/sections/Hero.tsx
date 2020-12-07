@@ -65,7 +65,7 @@ function Hero(): ReactElement {
                     <CTAButton rightIcon={ApplyIcon}>Apply Now</CTAButton>
                   </Link>
                   <Link
-                    href="mailto:sponsor@uottahack.ca"
+                    href="mailto:sponsorship@uottahack.ca"
                     marginLeft={[0, 0, 8]}
                     marginTop={[12, 12, 0]}
                   >

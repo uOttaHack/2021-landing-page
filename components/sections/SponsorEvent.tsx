@@ -18,16 +18,23 @@ function SponsorEvent(): ReactElement {
         >
           <Box marginTop={styles.sectionTopMargin} w={["100%", "100%", "48%"]}>
             <HeadlineAuto marginBottom="16px">
-              Sponsor a special <br />
-              weekend
+              Interested in
+              <br />
+              sponsoring?
             </HeadlineAuto>
             <BodyAuto>
-              Each year, our sponsors empower us to unite over 400 emerging
-              developers, designers, and imaginaries. Your support makes it
-              possible for hackers to build something they are proud of.
+              Over the past 3 years, our sponsors have made it possible for over
+              500 developers, designers, product managers and dreamers to turn
+              their ideas into a reality. uOttaHack would not be possible
+              without the support and generosity of our amazing sponsors.
+            </BodyAuto>
+            <br />
+            <BodyAuto>
+              Join us for a weekend of fun and innovation, all from the comfort
+              of your home!
             </BodyAuto>
             <Link
-              href="mailto:sponsor@uottahack.ca"
+              href="mailto:sponsorship@uottahack.ca"
               display="inline-block"
               marginTop={12}
             >
