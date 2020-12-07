@@ -7,7 +7,7 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/core";
-import { Headline, Body2 } from "@/components/core/Text";
+import { Headline } from "@/components/core/Text";
 import ReactMarkdown from "react-markdown";
 import theme from "@/src/theme";
 
@@ -18,6 +18,12 @@ const HeaderText = styled(Headline)`
 const highlightColor = "#28e6a4";
 
 const Markdown = styled(ReactMarkdown)`
+  * {
+    font-family: Inter;
+    font-size: 14px;
+    color: ${theme.colors.brand.background_on};
+  }
+
   a {
     color: ${theme.colors.brand.primary};
 
@@ -69,9 +75,7 @@ function FAQItem(props: {
           borderLeft={`4px solid ${highlightColor}`}
           padding="0px 24px 28px 24px"
         >
-          <Body2>
-            <Markdown>{props.answer}</Markdown>
-          </Body2>
+          <Markdown>{props.answer}</Markdown>
         </AccordionPanel>
       </AccordionItem>
     </>
