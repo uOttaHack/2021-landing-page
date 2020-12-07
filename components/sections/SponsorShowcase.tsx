@@ -20,6 +20,7 @@ const sponsorsWideGrid = toGridTemplate([
   `deloitte deloitte innovapost innovapost solace solace`,
   `adga adga ciena ciena morgan morgan`,
   `. balsamiq balsamiq kanatanorthbia kanatanorthbia .`,
+  `. voiceflow voiceflow onepassword onepassword .`,
 ]);
 
 const sponsorsThinGrid = toGridTemplate([
@@ -29,6 +30,7 @@ const sponsorsThinGrid = toGridTemplate([
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
   `balsamiq balsamiq . . kanatanorthbia kanatanorthbia`,
+  `voiceflow voiceflow . . onepassword onepassword`,
 ]);
 
 const communityGrid = toGridTemplate([`mlh github uottawa`]);
@@ -92,6 +94,16 @@ function SponsorShowcase(): ReactElement {
             src={`${imgPath}/kanatanorthbia.png`}
             gridArea="kanatanorthbia"
             width={["60%", "50%", "30%"]}
+          />
+          <SponsorImage
+            src={`${imgPath}/voiceflow.png`}
+            gridArea="voiceflow"
+            width={["60%", "50%", "30%"]}
+          />
+          <SponsorImage
+            src={`${imgPath}/onepassword.png`}
+            gridArea="onepassword"
+            width={["75%", "65%", "45%"]}
           />
         </Grid>
         <Headline5 marginTop="0.5in">Community Partners</Headline5>
