@@ -37,7 +37,7 @@ function Hero(): ReactElement {
               flexDirection={["column", "column", "row", "row"]}
             >
               <Box w={["100%", "100%", "41%", "37.5%"]}>
-                <BodyAuto paddingBottom={4}>February 7-9, 2021</BodyAuto>
+                <BodyAuto paddingBottom={4}>February 5-7, 2021</BodyAuto>
                 <Headline3
                   lineHeight={headlineLineHeights}
                   fontSize={headlineFontSizes}
@@ -55,7 +55,9 @@ function Hero(): ReactElement {
                   flexDirection={["column", "column", "row", "row"]}
                   alignItems={["flex-start", "flex-start", "center"]}
                 >
-                  <CTAButton>Get Started</CTAButton>
+                  <Link href="/apply">
+                    <CTAButton>Get Started</CTAButton>
+                  </Link>
                   <Link
                     href="mailto:sponsor@uottahack.ca"
                     marginLeft={[0, 0, 8]}
