@@ -1,12 +1,15 @@
 import { ReactElement } from "react";
-import { Box, Flex, Grid, Image } from "@chakra-ui/core";
+import styled from "@emotion/styled";
+import { Box, Flex, Image } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
 import { BodyAuto, HeadlineAuto } from "@/components/core/Text";
 import { LocationHashEnum } from "@/src/constants";
 
-const toInches = (sizes: number[]) => sizes.map((size) => `${size}in`);
-const bubbleGridWidths = [2.5, 4, 3, 3.5, 4.5];
-const bubbleGridHeights = bubbleGridWidths.map((width) => (width * 8) / 7);
+const BubbleImage = styled(Image)`
+  position: absolute;
+  object-fit: cover;
+  border-radius: 9999px;
+`;
 
 function About(): ReactElement {
   return (
@@ -48,68 +51,29 @@ function About(): ReactElement {
               Details to be announced!
             </BodyAuto>
           </Box>
-          <Box>
-            <Grid
-              width={toInches(bubbleGridWidths)}
-              height={toInches(bubbleGridHeights)}
-              justifyItems="center"
-              alignItems="center"
-              gridTemplateColumns="repeat(14, 1fr)"
-              gridTemplateRows="repeat(16, 1fr)"
-              gridTemplateAreas={[
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . a . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . c . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . b . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . d . .`,
-                `. . . . . . . . . . . . . .`,
-                `. . . . . . . . . . . . . .`,
-              ]
-                .map((row) => `"${row}"`)
-                .join(" ")}
-            >
-              <Image
-                gridArea="a"
-                height="500%"
-                maxWidth="500%"
-                rounded="full"
-                objectFit="cover"
-                src="/images/2020a.jpg"
-              />
-              <Image
-                gridArea="b"
-                height="800%"
-                maxWidth="800%"
-                rounded="full"
-                objectFit="cover"
-                src="/images/2020b.jpg"
-              />
-              <Image
-                gridArea="c"
-                height="650%"
-                maxWidth="650%"
-                rounded="full"
-                objectFit="cover"
-                src="/images/2020c.jpg"
-              />
-              <Image
-                gridArea="d"
-                height="450%"
-                maxWidth="450%"
-                rounded="full"
-                objectFit="cover"
-                src="/images/2020d.jpg"
-              />
-            </Grid>
+          <Box
+            position="relative"
+            size={["2.5in", "4in", "3in", "3.5in", "4.5in"]}
+          >
+            <BubbleImage top="0" left="7%" size="33%" src="/images/2020a.jpg" />
+            <BubbleImage
+              bottom="4%"
+              left="4%"
+              size="54%"
+              src="/images/2020b.jpg"
+            />
+            <BubbleImage
+              top="8%"
+              right="2%"
+              size="42%"
+              src="/images/2020c.jpg"
+            />
+            <BubbleImage
+              bottom="1%"
+              right="2%"
+              size="28%"
+              src="/images/2020d.jpg"
+            />
           </Box>
         </Flex>
       </Wrapper>
