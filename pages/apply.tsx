@@ -8,7 +8,7 @@ function ApplyPage(): ReactElement {
         <title>Apply - uOttaHack 4</title>
         <meta
           name="description"
-          content="Apply to uOttaHack 4 to explore your limits. Hosted at the University of Ottawa, uOttaHack is Ottawa's largest hackathon and this year will be its most exciting iteration yet!"
+          content="Apply to uOttaHack 4. uOttaHack is uOttawa's largest hackathon and this year will be its more exciting iteration yet! To commemorate this special milestone, uOttaHack 4 is expanding the hacker experience with new initiatives to create an unforgettable weekend for its hackers, VIRTUALLY!"
         />
       </Head>
 

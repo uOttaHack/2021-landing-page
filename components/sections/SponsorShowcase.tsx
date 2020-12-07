@@ -35,7 +35,10 @@ const communityGrid = toGridTemplate([`mlh github uottawa`]);
 
 function SponsorShowcase(): ReactElement {
   return (
-    <Box id={LocationHashEnum.Sponsors} marginTop={styles.sectionTopMargin}>
+    <Box
+      id={LocationHashEnum.Sponsors}
+      marginTop={[styles.sectionTopMargin, styles.sectionTopMargin, "2in"]}
+    >
       <Wrapper>
         <HeadlineAuto>Sponsors</HeadlineAuto>
         <Grid

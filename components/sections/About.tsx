@@ -31,18 +31,21 @@ function About(): ReactElement {
               turned 4!
             </HeadlineAuto>
             <BodyAuto>
-              Hosted at the University of Ottawa, uOttaHack is Ottawa&apos;s
-              largest hackathon and this year will be its most exciting
-              iteration yet! To commemorate this special milestone, uOttaHack 3
-              is expanding the hacker experience with new initiatives to create
-              an unforgettable weekend for its hackers.
+              uOttaHack is uOttawa&apos;s largest hackathon and this year will
+              be its more exciting iteration yet! To commemorate this special
+              milestone, uOttaHack 4 is expanding the hacker experience with new
+              initiatives to create an unforgettable weekend for its hackers,
+              VIRTUALLY!
             </BodyAuto>
             <br />
             <BodyAuto>
-              Now a 36 hour long hackathon, uOttaHack 3 will welcome over 400
-              students on February 7th-9th from a diverse set of backgrounds to
-              collaborate on projects, learn at workshops, and build out their
-              innovative ideas.
+              COVID-19 has brought the greatest medical challenge that world has
+              seen in our generation. For uOttaHack 4, we are bringing hackers
+              together to help build solutions for issues our local community is
+              facing due to COVID-19. After reaching out to multiple local
+              businesses such as hospitals, nursing homes and hotels, we have
+              created challenges that will help the city of Ottawa recover.
+              Details to be announced!
             </BodyAuto>
           </Box>
           <Box>
