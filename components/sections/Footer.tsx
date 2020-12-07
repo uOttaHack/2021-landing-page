@@ -19,7 +19,7 @@ const GreyCaption = styled(Caption)`
   color: grey;
 `;
 
-const footerItemMarginX = "1.5vw";
+const footerItemMarginX = "32px";
 const footerItemMarginY = ["16px", "16px", "16px", 0];
 
 const FooterLink = styled(Link)`
@@ -97,7 +97,13 @@ function Footer(): ReactElement {
                     key={href}
                     href={href}
                     isExternal
-                    marginX={["16px", "16px", "16px", footerItemMarginX]}
+                    marginX={[
+                      "16px",
+                      "16px",
+                      "16px",
+                      "16px",
+                      footerItemMarginX,
+                    ]}
                   >
                     <FontAwesomeIcon width="20px" icon={icon} />
                   </Link>
