@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { BodyAuto, Headline3, Link } from "../core/Text";
 import { CTAButton } from "../core/Button";
 import { styles } from "@/src/constants";
-import { Box, Flex } from "@chakra-ui/core";
+import { Box, Flex, Icon } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 import Wrapper from "@/components/Wrapper";
 import Lottie from "react-lottie";
@@ -19,6 +19,12 @@ const lottieOptions = {
     preserveAspectRatio: "xMidYMid slice",
   },
 };
+
+const ApplyIcon = () => (
+  <Flex size="14px" align="center" marginLeft="8px" overflow="visible">
+    <Icon name="arrow-forward" size="24px" />
+  </Flex>
+);
 
 function Hero(): ReactElement {
   return (
@@ -56,7 +62,7 @@ function Hero(): ReactElement {
                   alignItems={["flex-start", "flex-start", "center"]}
                 >
                   <Link href="/apply">
-                    <CTAButton>Get Started</CTAButton>
+                    <CTAButton rightIcon={ApplyIcon}>Apply Now</CTAButton>
                   </Link>
                   <Link
                     href="mailto:sponsor@uottahack.ca"

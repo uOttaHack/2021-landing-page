@@ -40,7 +40,7 @@ function Footer(): ReactElement {
         <footer>
           <Box paddingBottom="30vw">
             <Divider
-              marginTop={["2in", "2.5in", "2.5in", "3in"]}
+              marginTop={["1in", "1.5in", "2in", "2.5in"]}
               marginBottom={["0.4in", "0.6in", "0.8in", "1in"]}
               borderColor="#dbdbdb"
             />
