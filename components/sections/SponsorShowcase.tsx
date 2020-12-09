@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import styled from "@emotion/styled";
-import { Box, Grid, Image } from "@chakra-ui/core";
+import { Box, Grid, Image, Link } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
 import { HeadlineAuto, Headline5 } from "../core/Text";
 import { LocationHashEnum, styles } from "@/src/constants";
@@ -8,7 +8,11 @@ import { LocationHashEnum, styles } from "@/src/constants";
 const imgPath = "/images";
 
 const SponsorImage = styled(Image)`
+  margin: 0 auto;
   user-select: none;
+`;
+
+const SponsorLink = styled(Link)`
   margin-top: 32px;
   margin-bottom: 32px;
 `;
@@ -55,16 +59,25 @@ function SponsorShowcase(): ReactElement {
           justifyItems="center"
           alignItems="center"
         >
-          <SponsorImage
-            src={`${imgPath}/deloitte.png`}
+          <SponsorLink
+            href="https://www2.deloitte.com/ca/en.html"
             gridArea="deloitte"
-            width={["50%", "50%", "70%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/innovapost.png`}
+          >
+            <SponsorImage
+              src={`${imgPath}/deloitte.png`}
+              width={["50%", "50%", "70%"]}
+            />
+          </SponsorLink>
+          <SponsorLink
+            href="https://www2.deloitte.com/ca/en.html"
             gridArea="innovapost"
-            width={["70%", "70%", "90%"]}
-          />
+          >
+            <SponsorImage
+              src={`${imgPath}/innovapost.png`}
+              width={["70%", "70%", "90%"]}
+            />
+          </SponsorLink>
+
           <SponsorImage
             src={`${imgPath}/solace.png`}
             gridArea="solace"
