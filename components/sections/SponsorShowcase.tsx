@@ -15,6 +15,10 @@ const SponsorImage = styled(Image)`
 const SponsorLink = styled(Link)`
   margin-top: 32px;
   margin-bottom: 32px;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
 `;
 
 const toGridTemplate = (rows: string[]) =>
