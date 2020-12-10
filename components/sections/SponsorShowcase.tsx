@@ -62,6 +62,8 @@ function SponsorShowcase(): ReactElement {
           <SponsorLink
             href="https://www2.deloitte.com/ca/en.html"
             gridArea="deloitte"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <SponsorImage
               src={`${imgPath}/deloitte.png`}
@@ -69,55 +71,108 @@ function SponsorShowcase(): ReactElement {
             />
           </SponsorLink>
           <SponsorLink
-            href="https://www2.deloitte.com/ca/en.html"
+            href="https://innovapost.com"
             gridArea="innovapost"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <SponsorImage
               src={`${imgPath}/innovapost.png`}
               width={["70%", "70%", "90%"]}
             />
           </SponsorLink>
-
-          <SponsorImage
-            src={`${imgPath}/solace.png`}
+          <SponsorLink
+            href="https://solace.com"
             gridArea="solace"
-            width={["50%", "50%", "70%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/adga.png`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/solace.png`}
+              width={["50%", "50%", "70%"]}
+            />
+          </SponsorLink>
+          <SponsorLink
+            href="https://www.adga.ca/"
             gridArea="adga"
-            width={["80%", "80%", "45%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/ciena.svg`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/adga.png`}
+              width={["80%", "80%", "45%"]}
+            />
+          </SponsorLink>
+          <SponsorLink
+            href="https://www.ciena.ca/"
             gridArea="ciena"
-            width={["80%", "80%", "40%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/morgan-stanley.png`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/ciena.svg`}
+              width={["80%", "80%", "80%"]}
+            />
+          </SponsorLink>
+          <SponsorLink
+            href="https://www.ciena.ca/"
             gridArea="morgan"
-            width={["100%", "100%", "50%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/balsamiq.png`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/morgan-stanley.png`}
+              width={["100%", "100%", "50%"]}
+            />
+          </SponsorLink>
+
+          <SponsorLink
+            href="https://balsamiq.com/"
             gridArea="balsamiq"
-            width={["60%", "50%", "30%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/kanatanorthbia.png`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/balsamiq.png`}
+              width={["60%", "50%", "30%"]}
+            />
+          </SponsorLink>
+
+          <SponsorLink
+            href="https://www.kanatanorthba.com/"
             gridArea="kanatanorthbia"
-            width={["60%", "50%", "30%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/voiceflow.png`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/kanatanorthbia.png`}
+              width={["60%", "50%", "30%"]}
+            />
+          </SponsorLink>
+
+          <SponsorLink
+            href="https://www.voiceflow.com/"
             gridArea="voiceflow"
-            width={["60%", "50%", "30%"]}
-          />
-          <SponsorImage
-            src={`${imgPath}/onepassword.png`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/voiceflow.png`}
+              width={["60%", "50%", "30%"]}
+            />
+          </SponsorLink>
+
+          <SponsorLink
+            href="https://1password.com/"
             gridArea="onepassword"
-            width={["75%", "65%", "45%"]}
-          />
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SponsorImage
+              src={`${imgPath}/onepassword.png`}
+              width={["75%", "65%", "45%"]}
+            />
+          </SponsorLink>
         </Grid>
         <Headline5 marginTop="0.5in">Community Partners</Headline5>
         <Grid
