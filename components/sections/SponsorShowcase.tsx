@@ -1,24 +1,16 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import styled from "@emotion/styled";
-import { Box, Grid, Image, Link } from "@chakra-ui/core";
+import { Box, Grid, Image } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
 import { HeadlineAuto, Headline5 } from "../core/Text";
 import { LocationHashEnum, styles } from "@/src/constants";
+import SponsorItem from "@/components/SponsorItem";
 
 const imgPath = "/images";
 
 const SponsorImage = styled(Image)`
   margin: 0 auto;
   user-select: none;
-`;
-
-const SponsorLink = styled(Link)`
-  margin-top: 32px;
-  margin-bottom: 32px;
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-  }
 `;
 
 const toGridTemplate = (rows: string[]) =>
@@ -44,6 +36,10 @@ const sponsorsThinGrid = toGridTemplate([
 const communityGrid = toGridTemplate([`mlh github uottawa`]);
 
 function SponsorShowcase(): ReactElement {
+  const [hovered, setHovered] = useState('none');
+
+  const shouldFade = (sponsorName: string) => (sponsorName !== hovered && hovered !== 'none');
+
   return (
     <Box
       id={LocationHashEnum.Sponsors}
@@ -63,120 +59,106 @@ function SponsorShowcase(): ReactElement {
           justifyItems="center"
           alignItems="center"
         >
-          <SponsorLink
-            href="https://www2.deloitte.com/ca/en.html"
+          {/* Deloitte */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/deloitte.png`} 
+            sponsorUrl="https://www2.deloitte.com/ca/en.html"
             gridArea="deloitte"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/deloitte.png`}
-              width={["50%", "50%", "70%"]}
-            />
-          </SponsorLink>
-          <SponsorLink
-            href="https://innovapost.com"
+            width={["50%", "50%", "70%"]}
+            faded={shouldFade('deloitte')}
+            onMouseEnter={() => setHovered('deloitte')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Innovapost */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/innovapost.png`} 
+            sponsorUrl="https://innovapost.com"
             gridArea="innovapost"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/innovapost.png`}
-              width={["70%", "70%", "90%"]}
-            />
-          </SponsorLink>
-          <SponsorLink
-            href="https://solace.com"
+            width={["70%", "70%", "90%"]}
+            faded={shouldFade('innovapost')}
+            onMouseEnter={() => setHovered('innovapost')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Solace */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/solace.png`} 
+            sponsorUrl="https://solace.com"
             gridArea="solace"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/solace.png`}
-              width={["50%", "50%", "70%"]}
-            />
-          </SponsorLink>
-          <SponsorLink
-            href="https://www.adga.ca/"
+            width={["50%", "50%", "70%"]}
+            faded={shouldFade('solace')}
+            onMouseEnter={() => setHovered('solace')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* ADGA */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/adga.png`} 
+            sponsorUrl="https://www.adga.ca"
             gridArea="adga"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/adga.png`}
-              width={["80%", "80%", "45%"]}
-            />
-          </SponsorLink>
-          <SponsorLink
-            href="https://www.ciena.ca/"
+            width={["80%", "80%", "45%"]}
+            faded={shouldFade('adga')}
+            onMouseEnter={() => setHovered('adga')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Ciena */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/ciena.svg`} 
+            sponsorUrl="https://www.ciena.ca"
             gridArea="ciena"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/ciena.svg`}
-              width={["80%", "80%", "80%"]}
-            />
-          </SponsorLink>
-          <SponsorLink
-            href="https://www.ciena.ca/"
+            width={["80%", "80%", "80%"]}
+            faded={shouldFade('ciena')}
+            onMouseEnter={() => setHovered('ciena')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Morgan Stanley */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/morgan-stanley.png`} 
+            sponsorUrl="https://www.morganstanley.com"
             gridArea="morgan"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/morgan-stanley.png`}
-              width={["100%", "100%", "50%"]}
-            />
-          </SponsorLink>
-
-          <SponsorLink
-            href="https://balsamiq.com/"
+            width={["100%", "100%", "50%"]}
+            faded={shouldFade('morgan')}
+            onMouseEnter={() => setHovered('morgan')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Balsamiq */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/balsamiq.png`} 
+            sponsorUrl="https://balsamiq.com"
             gridArea="balsamiq"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/balsamiq.png`}
-              width={["60%", "50%", "30%"]}
-            />
-          </SponsorLink>
-
-          <SponsorLink
-            href="https://www.kanatanorthba.com/"
+            width={["60%", "50%", "30%"]}
+            faded={shouldFade('balsamiq')}
+            onMouseEnter={() => setHovered('balsamiq')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Kanata North */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/kanatanorthbia.png`} 
+            sponsorUrl="https://www.kanatanorthba.com"
             gridArea="kanatanorthbia"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/kanatanorthbia.png`}
-              width={["60%", "50%", "30%"]}
-            />
-          </SponsorLink>
-
-          <SponsorLink
-            href="https://www.voiceflow.com/"
+            width={["60%", "50%", "30%"]}
+            faded={shouldFade('kanatanorthbia')}
+            onMouseEnter={() => setHovered('kanatanorthbia')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Voiceflow */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/voiceflow.png`} 
+            sponsorUrl="https://www.voiceflow.com"
             gridArea="voiceflow"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/voiceflow.png`}
-              width={["60%", "50%", "30%"]}
-            />
-          </SponsorLink>
-
-          <SponsorLink
-            href="https://1password.com/"
+            width={["60%", "50%", "30%"]}
+            faded={shouldFade('voiceflow')}
+            onMouseEnter={() => setHovered('voiceflow')}
+            onMouseLeave={() => setHovered('none')}
+          />
+          {/* Voiceflow */}
+          <SponsorItem 
+            imgUrl={`${imgPath}/onepassword.png`} 
+            sponsorUrl="https://1password.com"
             gridArea="onepassword"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SponsorImage
-              src={`${imgPath}/onepassword.png`}
-              width={["75%", "65%", "45%"]}
-            />
-          </SponsorLink>
+            width={["75%", "65%", "45%"]}
+            faded={shouldFade('onepassword')}
+            onMouseEnter={() => setHovered('onepassword')}
+            onMouseLeave={() => setHovered('none')}
+          />
         </Grid>
         <Headline5 marginTop="0.5in">Community Partners</Headline5>
         <Grid
