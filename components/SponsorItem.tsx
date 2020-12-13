@@ -11,20 +11,27 @@ export interface SponsorProps extends BoxProps {
 const SponsorItem = styled(SponsorItemInner)`
   margin: 32px 0;
   transition: all 0.3s ease-in-out;
-  transition-delay: 0.1s
+  transition-delay: 0.1s;
 `;
 
 const SponsorLogo = styled(Image)`
   user-select: none;
   margin: 0 auto;
-`
+`;
 
-function SponsorItemInner({imgUrl, sponsorUrl, faded, ...boxProps}: SponsorProps): ReactElement {
-  return <Box {...boxProps} opacity={faded ? 0.3 : 1}>
-    <Link isExternal href={sponsorUrl}>
-      <SponsorLogo src={imgUrl} />
-    </Link>
-  </Box>
+function SponsorItemInner({
+  imgUrl,
+  sponsorUrl,
+  faded,
+  ...boxProps
+}: SponsorProps): ReactElement {
+  return (
+    <Box {...boxProps} opacity={faded ? 0.3 : 1}>
+      <Link isExternal href={sponsorUrl}>
+        <SponsorLogo src={imgUrl} />
+      </Link>
+    </Box>
+  );
 }
 
 export default SponsorItem;
