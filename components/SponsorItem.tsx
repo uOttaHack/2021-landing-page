@@ -27,7 +27,12 @@ function SponsorItemInner({
 }: SponsorProps): ReactElement {
   return (
     <Box {...boxProps} opacity={faded ? 0.3 : 1}>
-      <Link isExternal href={sponsorUrl} boxShadow="none !important" display="block">
+      <Link
+        isExternal
+        href={sponsorUrl}
+        boxShadow="none !important"
+        display="block"
+      >
         <SponsorLogo src={imgUrl} />
       </Link>
     </Box>
