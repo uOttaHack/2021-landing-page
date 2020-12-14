@@ -1,17 +1,11 @@
 import { ReactElement, useState } from "react";
-import styled from "@emotion/styled";
-import { Box, Grid, Image } from "@chakra-ui/core";
+import { Box, Grid } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
 import { HeadlineAuto, Headline5 } from "../core/Text";
 import { LocationHashEnum, styles } from "@/src/constants";
 import SponsorItem from "@/components/SponsorItem";
 
 const imgPath = "/images";
-
-const SponsorImage = styled(Image)`
-  margin: 0 auto;
-  user-select: none;
-`;
 
 const toGridTemplate = (rows: string[]) =>
   rows.map((row) => `"${row}"`).join(" ");
@@ -170,20 +164,35 @@ function SponsorShowcase(): ReactElement {
           justifyItems="center"
           alignItems="center"
         >
-          <SponsorImage
-            src={`${imgPath}/mlh.png`}
+          {/* MLH */}
+          <SponsorItem
+            imgUrl={`${imgPath}/mlh.png`}
+            sponsorUrl="https://mlh.io/"
             gridArea="mlh"
             width={["50%", "40%", "24%"]}
+            faded={shouldFade("mlh")}
+            onMouseEnter={() => setHovered("mlh")}
+            onMouseLeave={() => setHovered("none")}
           />
-          <SponsorImage
-            src={`${imgPath}/github.png`}
+          {/* GitHub */}
+          <SponsorItem
+            imgUrl={`${imgPath}/github.png`}
+            sponsorUrl="https://github.com/"
             gridArea="github"
             width={["60%", "50%", "30%"]}
+            faded={shouldFade("github")}
+            onMouseEnter={() => setHovered("github")}
+            onMouseLeave={() => setHovered("none")}
           />
-          <SponsorImage
-            src={`${imgPath}/uottawa.png`}
+          {/* uOttawa */}
+          <SponsorItem
+            imgUrl={`${imgPath}/uottawa.png`}
+            sponsorUrl="https://www.uottawa.ca/"
             gridArea="uottawa"
             width={["70%", "60%", "35%"]}
+            faded={shouldFade("uottawa")}
+            onMouseEnter={() => setHovered("uottawa")}
+            onMouseLeave={() => setHovered("none")}
           />
         </Grid>
       </Wrapper>
