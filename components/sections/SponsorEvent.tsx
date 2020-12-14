@@ -37,6 +37,7 @@ function SponsorEvent(): ReactElement {
               href="mailto:sponsorship@uottahack.ca"
               display="inline-block"
               marginTop={12}
+              textDecoration="none !important"
             >
               <CTAButton>Get in Touch</CTAButton>
             </Link>
