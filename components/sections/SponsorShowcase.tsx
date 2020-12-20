@@ -29,11 +29,25 @@ const sponsorsThinGrid = toGridTemplate([
 
 const communityGrid = toGridTemplate([`mlh github uottawa`]);
 
+enum SponsorSectionEnum {
+  NONE,
+  MONETARY,
+  IN_KIND,
+}
+
 function SponsorShowcase(): ReactElement {
   const [hovered, setHovered] = useState("none");
+  const [activeSection, setActiveSection] = useState(SponsorSectionEnum.NONE);
 
-  const shouldFade = (sponsorName: string) =>
-    sponsorName !== hovered && hovered !== "none";
+  const shouldFadeMonetary = (sponsorName: string) =>
+    sponsorName !== hovered &&
+    hovered !== "none" &&
+    activeSection === SponsorSectionEnum.MONETARY;
+
+  const shouldFadeInKind = (sponsorName: string) =>
+    sponsorName !== hovered &&
+    hovered !== "none" &&
+    activeSection === SponsorSectionEnum.IN_KIND;
 
   return (
     <Box
@@ -53,6 +67,8 @@ function SponsorShowcase(): ReactElement {
           ]}
           justifyItems="center"
           alignItems="center"
+          onMouseEnter={() => setActiveSection(SponsorSectionEnum.MONETARY)}
+          onMouseLeave={() => setActiveSection(SponsorSectionEnum.NONE)}
         >
           {/* Deloitte */}
           <SponsorItem
@@ -60,7 +76,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://www2.deloitte.com/ca/en.html"
             gridArea="deloitte"
             width={["50%", "50%", "70%"]}
-            faded={shouldFade("deloitte")}
+            faded={shouldFadeMonetary("deloitte")}
             onMouseEnter={() => setHovered("deloitte")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -70,7 +86,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://innovapost.com"
             gridArea="innovapost"
             width={["70%", "70%", "90%"]}
-            faded={shouldFade("innovapost")}
+            faded={shouldFadeMonetary("innovapost")}
             onMouseEnter={() => setHovered("innovapost")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -80,7 +96,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://solace.com"
             gridArea="solace"
             width={["50%", "50%", "70%"]}
-            faded={shouldFade("solace")}
+            faded={shouldFadeMonetary("solace")}
             onMouseEnter={() => setHovered("solace")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -90,7 +106,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://www.adga.ca"
             gridArea="adga"
             width={["80%", "80%", "45%"]}
-            faded={shouldFade("adga")}
+            faded={shouldFadeMonetary("adga")}
             onMouseEnter={() => setHovered("adga")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -100,7 +116,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://www.ciena.ca"
             gridArea="ciena"
             width={["80%", "80%", "80%"]}
-            faded={shouldFade("ciena")}
+            faded={shouldFadeMonetary("ciena")}
             onMouseEnter={() => setHovered("ciena")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -110,7 +126,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://www.morganstanley.com"
             gridArea="morgan"
             width={["100%", "100%", "50%"]}
-            faded={shouldFade("morgan")}
+            faded={shouldFadeMonetary("morgan")}
             onMouseEnter={() => setHovered("morgan")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -120,7 +136,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://balsamiq.com"
             gridArea="balsamiq"
             width={["60%", "50%", "30%"]}
-            faded={shouldFade("balsamiq")}
+            faded={shouldFadeMonetary("balsamiq")}
             onMouseEnter={() => setHovered("balsamiq")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -130,7 +146,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://www.kanatanorthba.com"
             gridArea="kanatanorthbia"
             width={["60%", "50%", "30%"]}
-            faded={shouldFade("kanatanorthbia")}
+            faded={shouldFadeMonetary("kanatanorthbia")}
             onMouseEnter={() => setHovered("kanatanorthbia")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -140,7 +156,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://www.voiceflow.com"
             gridArea="voiceflow"
             width={["60%", "50%", "30%"]}
-            faded={shouldFade("voiceflow")}
+            faded={shouldFadeMonetary("voiceflow")}
             onMouseEnter={() => setHovered("voiceflow")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -150,7 +166,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://1password.com"
             gridArea="onepassword"
             width={["75%", "65%", "45%"]}
-            faded={shouldFade("onepassword")}
+            faded={shouldFadeMonetary("onepassword")}
             onMouseEnter={() => setHovered("onepassword")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -163,6 +179,8 @@ function SponsorShowcase(): ReactElement {
           gridTemplateAreas={communityGrid}
           justifyItems="center"
           alignItems="center"
+          onMouseEnter={() => setActiveSection(SponsorSectionEnum.IN_KIND)}
+          onMouseLeave={() => setActiveSection(SponsorSectionEnum.NONE)}
         >
           {/* MLH */}
           <SponsorItem
@@ -170,7 +188,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://mlh.io/"
             gridArea="mlh"
             width={["50%", "40%", "24%"]}
-            faded={shouldFade("mlh")}
+            faded={shouldFadeInKind("mlh")}
             onMouseEnter={() => setHovered("mlh")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -180,7 +198,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://github.com/"
             gridArea="github"
             width={["60%", "50%", "30%"]}
-            faded={shouldFade("github")}
+            faded={shouldFadeInKind("github")}
             onMouseEnter={() => setHovered("github")}
             onMouseLeave={() => setHovered("none")}
           />
@@ -190,7 +208,7 @@ function SponsorShowcase(): ReactElement {
             sponsorUrl="https://www.uottawa.ca/"
             gridArea="uottawa"
             width={["70%", "60%", "35%"]}
-            faded={shouldFade("uottawa")}
+            faded={shouldFadeInKind("uottawa")}
             onMouseEnter={() => setHovered("uottawa")}
             onMouseLeave={() => setHovered("none")}
           />
