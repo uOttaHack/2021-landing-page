@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-import { BodyAuto, Headline3, Link } from "../core/Text";
-import { CTAButton } from "../core/Button";
+import { BodyAuto, Headline3, Link } from "@/components/core/Text";
+import { CTAButton } from "@/components/core/Button";
 import { styles } from "@/src/constants";
 import { Box, Flex, Icon } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";

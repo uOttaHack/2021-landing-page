@@ -1,7 +1,7 @@
 import { ReactElement, useState } from "react";
 import { Box, Grid } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
-import { HeadlineAuto, Headline5 } from "../core/Text";
+import { HeadlineAuto, Headline5 } from "@/components/core/Text";
 import { LocationHashEnum, styles } from "@/src/constants";
 import SponsorItem from "@/components/SponsorItem";
 

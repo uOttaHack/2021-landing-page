@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { BodyAuto, Headline5 } from "../core/Text";
+import { BodyAuto, Headline5 } from "@/components/core/Text";
 import { Box, Flex } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 import Wrapper from "@/components/Wrapper";
