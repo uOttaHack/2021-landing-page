@@ -14,7 +14,6 @@ const NavItem = styled(Box)`
   font-weight: bold;
   font-size: 16px;
   color: ${theme.colors.brand.background_on};
-  box-shadow: none !important;
 `;
 
 function NavOverlay(): ReactElement {
@@ -56,7 +55,6 @@ function NavOverlay(): ReactElement {
               href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=black"
               isExternal
               width="56px"
-              _focus={{}}
             >
               <MLH_Banner
                 width="100%"

@@ -1,12 +1,13 @@
 import { ReactElement } from "react";
-import { BodyAuto, Headline3, Link } from "../core/Text";
-import { CTAButton } from "../core/Button";
+import { BodyAuto, Headline3, Link } from "@/components/core/Text";
+import { CTAButton } from "@/components/core/Button";
 import { styles } from "@/src/constants";
 import { Box, Flex, Icon } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 import Wrapper from "@/components/Wrapper";
 import Lottie from "react-lottie";
 import animationData from "@/src/hero-lottie.json";
+import NextLink from "next/link";
 
 const headlineFontSizes = [48, 48, 48, 58, 72];
 const headlineLineHeights = [0.9, 0.9, 1];
@@ -61,9 +62,11 @@ function Hero(): ReactElement {
                   flexDirection={["column", "column", "row", "row"]}
                   alignItems={["flex-start", "flex-start", "center"]}
                 >
-                  <Link href="/apply">
-                    <CTAButton rightIcon={ApplyIcon}>Apply Now</CTAButton>
-                  </Link>
+                  <NextLink href="/apply" passHref>
+                    <Link>
+                      <CTAButton rightIcon={ApplyIcon}>Apply Now</CTAButton>
+                    </Link>
+                  </NextLink>
                   <Link
                     href="mailto:sponsorship@uottahack.ca"
                     marginLeft={[0, 0, 8]}

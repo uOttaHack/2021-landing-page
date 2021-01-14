@@ -54,7 +54,6 @@ function NavBar(): ReactElement {
                 width={bannerWidth}
                 position="absolute"
                 right={0}
-                _focus={{}}
                 href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=black"
                 isExternal
               >

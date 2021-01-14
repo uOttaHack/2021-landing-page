@@ -7,7 +7,6 @@ export const Button = styled(ChakraButton)`
   font-size: 14px;
   height: auto;
   border-radius: 4px;
-  box-shadow: none !important;
 `;
 
 export const CTAButton = styled(Button)`

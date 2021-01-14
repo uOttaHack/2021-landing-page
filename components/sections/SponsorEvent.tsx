@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import Wrapper from "@/components/Wrapper";
 import { CTAButton } from "@/components/core/Button";
-import { BodyAuto, HeadlineAuto } from "../core/Text";
+import { BodyAuto, HeadlineAuto } from "@/components/core/Text";
 import { Flex, Box, Link } from "@chakra-ui/core";
 import SponsorGraphic from "../svgs/sponsor.svg";
 import { styles } from "@/src/constants";
@@ -37,7 +37,9 @@ function SponsorEvent(): ReactElement {
               href="mailto:sponsorship@uottahack.ca"
               display="inline-block"
               marginTop={12}
-              textDecoration="none !important"
+              _hover={{
+                textDecoration: "none",
+              }}
             >
               <CTAButton>Get in Touch</CTAButton>
             </Link>

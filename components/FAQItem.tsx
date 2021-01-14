@@ -64,7 +64,6 @@ function FAQItem(props: {
           paddingBottom="12px"
           paddingX="24px"
           _hover={{ borderLeft: `4px solid ${highlightColor}` }}
-          _focus={{}}
         >
           <Box flex="1" textAlign="left">
             <HeaderText>{props.question}</HeaderText>

@@ -1,7 +1,7 @@
 import { ReactElement, useState } from "react";
 import { Box, Grid } from "@chakra-ui/core";
 import Wrapper from "@/components/Wrapper";
-import { HeadlineAuto, Headline5 } from "../core/Text";
+import { HeadlineAuto, Headline5 } from "@/components/core/Text";
 import { LocationHashEnum, styles } from "@/src/constants";
 import SponsorItem from "@/components/SponsorItem";
 
@@ -12,22 +12,28 @@ const toGridTemplate = (rows: string[]) =>
 
 const sponsorsWideGrid = toGridTemplate([
   `deloitte deloitte innovapost innovapost solace solace`,
+  `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
   `adga adga ciena ciena morgan morgan`,
-  `. balsamiq balsamiq kanatanorthbia kanatanorthbia .`,
-  `. voiceflow voiceflow onepassword onepassword .`,
+  `. balsamiq balsamiq onepassword onepassword .`,
+  `. . voiceflow voiceflow . .`,
 ]);
 
 const sponsorsThinGrid = toGridTemplate([
   `deloitte deloitte deloitte deloitte deloitte deloitte`,
   `innovapost innovapost innovapost innovapost innovapost innovapost`,
   `solace solace solace solace solace solace`,
+  `cdw cdw cdw cdw cdw cdw`,
+  `kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia`,
+  `ssc ssc ssc ssc ssc ssc`,
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
-  `balsamiq balsamiq . . kanatanorthbia kanatanorthbia`,
-  `voiceflow voiceflow . . onepassword onepassword`,
+  `balsamiq balsamiq . . onepassword onepassword`,
+  `. . voiceflow voiceflow . .`,
 ]);
 
-const communityGrid = toGridTemplate([`mlh github uottawa`]);
+const communityWideGrid = toGridTemplate([`mlh github uottawa wolfram`]);
+
+const communityThinGrid = toGridTemplate([`mlh github uottawa`, `. wolfram .`]);
 
 enum SponsorSectionEnum {
   NONE,
@@ -70,7 +76,7 @@ function SponsorShowcase(): ReactElement {
           onMouseEnter={() => setActiveSection(SponsorSectionEnum.MONETARY)}
           onMouseLeave={() => setActiveSection(SponsorSectionEnum.NONE)}
         >
-          {/* Deloitte */}
+          {/* Gold: Deloitte */}
           <SponsorItem
             imgUrl={`${imgPath}/deloitte.png`}
             sponsorUrl="https://www2.deloitte.com/ca/en.html"
@@ -80,7 +86,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("deloitte")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Innovapost */}
+          {/* Gold: Innovapost */}
           <SponsorItem
             imgUrl={`${imgPath}/innovapost.png`}
             sponsorUrl="https://innovapost.com"
@@ -90,7 +96,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("innovapost")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Solace */}
+          {/* Gold: Solace */}
           <SponsorItem
             imgUrl={`${imgPath}/solace.png`}
             sponsorUrl="https://solace.com"
@@ -100,7 +106,37 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("solace")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* ADGA */}
+          {/* Gold: CDW */}
+          <SponsorItem
+            imgUrl={`${imgPath}/cdw.png`}
+            sponsorUrl="https://www.cdw.com/"
+            gridArea="cdw"
+            width={["40%", "40%", "55%"]}
+            faded={shouldFadeMonetary("cdw")}
+            onMouseEnter={() => setHovered("cdw")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* Gold: Kanata North */}
+          <SponsorItem
+            imgUrl={`${imgPath}/kanatanorthbia.png`}
+            sponsorUrl="https://www.kanatanorthba.com"
+            gridArea="kanatanorthbia"
+            width={["40%", "40%", "45%"]}
+            faded={shouldFadeMonetary("kanatanorthbia")}
+            onMouseEnter={() => setHovered("kanatanorthbia")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* Gold: Shared Services Canada */}
+          <SponsorItem
+            imgUrl={`${imgPath}/shared-services-canada.png`}
+            sponsorUrl="https://www.canada.ca/en/shared-services.html"
+            gridArea="ssc"
+            width={["60%", "60%", "75%"]}
+            faded={shouldFadeMonetary("ssc")}
+            onMouseEnter={() => setHovered("ssc")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* Silver: ADGA */}
           <SponsorItem
             imgUrl={`${imgPath}/adga.png`}
             sponsorUrl="https://www.adga.ca"
@@ -110,7 +146,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("adga")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Ciena */}
+          {/* Silver: Ciena */}
           <SponsorItem
             imgUrl={`${imgPath}/ciena.svg`}
             sponsorUrl="https://www.ciena.ca"
@@ -120,7 +156,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("ciena")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Morgan Stanley */}
+          {/* Silver: Morgan Stanley */}
           <SponsorItem
             imgUrl={`${imgPath}/morgan-stanley.png`}
             sponsorUrl="https://www.morganstanley.com"
@@ -130,7 +166,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("morgan")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Balsamiq */}
+          {/* Bronze: Balsamiq */}
           <SponsorItem
             imgUrl={`${imgPath}/balsamiq.png`}
             sponsorUrl="https://balsamiq.com"
@@ -140,17 +176,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("balsamiq")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Kanata North */}
-          <SponsorItem
-            imgUrl={`${imgPath}/kanatanorthbia.png`}
-            sponsorUrl="https://www.kanatanorthba.com"
-            gridArea="kanatanorthbia"
-            width={["60%", "50%", "30%"]}
-            faded={shouldFadeMonetary("kanatanorthbia")}
-            onMouseEnter={() => setHovered("kanatanorthbia")}
-            onMouseLeave={() => setHovered("none")}
-          />
-          {/* Voiceflow */}
+          {/* Bronze: Voiceflow */}
           <SponsorItem
             imgUrl={`${imgPath}/voiceflow.png`}
             sponsorUrl="https://www.voiceflow.com"
@@ -160,7 +186,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("voiceflow")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Voiceflow */}
+          {/* Bronze: 1Password */}
           <SponsorItem
             imgUrl={`${imgPath}/onepassword.png`}
             sponsorUrl="https://1password.com"
@@ -175,8 +201,16 @@ function SponsorShowcase(): ReactElement {
         <Grid
           marginTop="0.5in"
           width="100%"
-          gridTemplateColumns="repeat(3, 1fr)"
-          gridTemplateAreas={communityGrid}
+          gridTemplateColumns={[
+            "repeat(3, 1fr)",
+            "repeat(3, 1fr)",
+            "repeat(4, 1fr)",
+          ]}
+          gridTemplateAreas={[
+            communityThinGrid,
+            communityThinGrid,
+            communityWideGrid,
+          ]}
           justifyItems="center"
           alignItems="center"
           onMouseEnter={() => setActiveSection(SponsorSectionEnum.IN_KIND)}
@@ -210,6 +244,16 @@ function SponsorShowcase(): ReactElement {
             width={["70%", "60%", "35%"]}
             faded={shouldFadeInKind("uottawa")}
             onMouseEnter={() => setHovered("uottawa")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* Wolfram */}
+          <SponsorItem
+            imgUrl={`${imgPath}/wolfram.png`}
+            sponsorUrl="https://www.wolfram.com/"
+            gridArea="wolfram"
+            width={["90%", "70%", "40%"]}
+            faded={shouldFadeInKind("wolfram")}
+            onMouseEnter={() => setHovered("wolfram")}
             onMouseLeave={() => setHovered("none")}
           />
         </Grid>
