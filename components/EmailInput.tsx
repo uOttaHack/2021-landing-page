@@ -134,7 +134,6 @@ function EmailInput(): ReactElement {
             color="white"
             fontSize={isDisabled ? "16px" : "20px"}
             size="sm"
-            _focus={{}}
             _hover={
               isDisabled
                 ? undefined
