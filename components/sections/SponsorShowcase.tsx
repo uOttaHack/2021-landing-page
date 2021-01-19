@@ -13,7 +13,7 @@ const toGridTemplate = (rows: string[]) =>
 const sponsorsWideGrid = toGridTemplate([
   `deloitte deloitte innovapost innovapost solace solace`,
   `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
-  `.. .. sunlife sunlife .. ..`,
+  `. . sunlife sunlife . .`,
   `adga adga ciena ciena morgan morgan`,
   `. balsamiq balsamiq onepassword onepassword .`,
   `. voiceflow voiceflow wolfram wolfram .`,
