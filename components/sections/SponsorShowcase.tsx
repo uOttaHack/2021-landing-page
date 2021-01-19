@@ -13,9 +13,10 @@ const toGridTemplate = (rows: string[]) =>
 const sponsorsWideGrid = toGridTemplate([
   `deloitte deloitte innovapost innovapost solace solace`,
   `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
+  `. . sunlife sunlife . .`,
   `adga adga ciena ciena morgan morgan`,
   `. balsamiq balsamiq onepassword onepassword .`,
-  `. . voiceflow voiceflow . .`,
+  `. voiceflow voiceflow wolfram wolfram .`,
 ]);
 
 const sponsorsThinGrid = toGridTemplate([
@@ -25,15 +26,16 @@ const sponsorsThinGrid = toGridTemplate([
   `cdw cdw cdw cdw cdw cdw`,
   `kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia`,
   `ssc ssc ssc ssc ssc ssc`,
+  `sunlife sunlife sunlife sunlife sunlife sunlife`,
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
-  `balsamiq balsamiq . . onepassword onepassword`,
-  `. . voiceflow voiceflow . .`,
+  `. balsamiq balsamiq onepassword onepassword .`,
+  `. voiceflow voiceflow wolfram wolfram .`,
 ]);
 
-const communityWideGrid = toGridTemplate([`mlh github uottawa wolfram`]);
+const communityWideGrid = toGridTemplate([`mlh github uottawa decode`]);
 
-const communityThinGrid = toGridTemplate([`mlh github uottawa`, `. wolfram .`]);
+const communityThinGrid = toGridTemplate([`mlh github uottawa`, `. decode .`]);
 
 enum SponsorSectionEnum {
   NONE,
@@ -136,6 +138,16 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("ssc")}
             onMouseLeave={() => setHovered("none")}
           />
+          {/* Gold: Sun Life */}
+          <SponsorItem
+            imgUrl={`${imgPath}/sunlife.png`}
+            sponsorUrl="https://www.sunlife.ca/en/"
+            gridArea="sunlife"
+            width={["60%", "60%", "75%"]}
+            faded={shouldFadeMonetary("sunlife")}
+            onMouseEnter={() => setHovered("sunlife")}
+            onMouseLeave={() => setHovered("none")}
+          />
           {/* Silver: ADGA */}
           <SponsorItem
             imgUrl={`${imgPath}/adga.png`}
@@ -196,6 +208,16 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("onepassword")}
             onMouseLeave={() => setHovered("none")}
           />
+          {/* Bronze: Wolfram */}
+          <SponsorItem
+            imgUrl={`${imgPath}/wolfram.png`}
+            sponsorUrl="https://www.wolfram.com/"
+            gridArea="wolfram"
+            width={["75%", "65%", "45%"]}
+            faded={shouldFadeMonetary("wolfram")}
+            onMouseEnter={() => setHovered("wolfram")}
+            onMouseLeave={() => setHovered("none")}
+          />
         </Grid>
         <Headline5 marginTop="0.5in">Community Partners</Headline5>
         <Grid
@@ -246,14 +268,14 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("uottawa")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Wolfram */}
+          {/* Hack Decode */}
           <SponsorItem
-            imgUrl={`${imgPath}/wolfram.png`}
-            sponsorUrl="https://www.wolfram.com/"
-            gridArea="wolfram"
+            imgUrl={`${imgPath}/decode.png`}
+            sponsorUrl="https://www.hackdecode.io/"
+            gridArea="decode"
             width={["90%", "70%", "40%"]}
-            faded={shouldFadeInKind("wolfram")}
-            onMouseEnter={() => setHovered("wolfram")}
+            faded={shouldFadeInKind("decode")}
+            onMouseEnter={() => setHovered("decode")}
             onMouseLeave={() => setHovered("none")}
           />
         </Grid>
