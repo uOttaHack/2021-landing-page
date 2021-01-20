@@ -15,8 +15,8 @@ const sponsorsWideGrid = toGridTemplate([
   `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
   `. . sunlife sunlife . .`,
   `adga adga ciena ciena morgan morgan`,
-  `. balsamiq balsamiq onepassword onepassword .`,
-  `. voiceflow voiceflow wolfram wolfram .`,
+  `. . balsamiq balsamiq . .`,
+  `voiceflow voiceflow onepassword onepassword wolfram wolfram`,
 ]);
 
 const sponsorsThinGrid = toGridTemplate([
@@ -29,8 +29,9 @@ const sponsorsThinGrid = toGridTemplate([
   `sunlife sunlife sunlife sunlife sunlife sunlife`,
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
-  `. balsamiq balsamiq onepassword onepassword .`,
-  `. voiceflow voiceflow wolfram wolfram .`,
+  `. . balsamiq balsamiq . .`,
+  `voiceflow voiceflow . . onepassword onepassword`,
+  `. . wolfram wolfram . .`,
 ]);
 
 const communityWideGrid = toGridTemplate([`mlh github uottawa decode`]);
@@ -183,12 +184,12 @@ function SponsorShowcase(): ReactElement {
             imgUrl={`${imgPath}/balsamiq.png`}
             sponsorUrl="https://balsamiq.com"
             gridArea="balsamiq"
-            width={["60%", "50%", "30%"]}
+            width={["60%", "60%", "30%"]}
             faded={shouldFadeMonetary("balsamiq")}
             onMouseEnter={() => setHovered("balsamiq")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Bronze: Voiceflow */}
+          {/* In-kind: Voiceflow */}
           <SponsorItem
             imgUrl={`${imgPath}/voiceflow.png`}
             sponsorUrl="https://www.voiceflow.com"
@@ -198,7 +199,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("voiceflow")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Bronze: 1Password */}
+          {/* In-kind: 1Password */}
           <SponsorItem
             imgUrl={`${imgPath}/onepassword.png`}
             sponsorUrl="https://1password.com"
@@ -208,7 +209,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("onepassword")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Bronze: Wolfram */}
+          {/* In-kind: Wolfram */}
           <SponsorItem
             imgUrl={`${imgPath}/wolfram.png`}
             sponsorUrl="https://www.wolfram.com/"
