@@ -13,7 +13,7 @@ const toGridTemplate = (rows: string[]) =>
 const sponsorsWideGrid = toGridTemplate([
   `deloitte deloitte innovapost innovapost solace solace`,
   `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
-  `. . sunlife sunlife . .`,
+  // `. . sunlife sunlife . .`,
   `adga adga ciena ciena morgan morgan`,
   `. . balsamiq balsamiq . .`,
   `voiceflow voiceflow onepassword onepassword wolfram wolfram`,
@@ -26,7 +26,7 @@ const sponsorsThinGrid = toGridTemplate([
   `cdw cdw cdw cdw cdw cdw`,
   `kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia kanatanorthbia`,
   `ssc ssc ssc ssc ssc ssc`,
-  `sunlife sunlife sunlife sunlife sunlife sunlife`,
+  // `sunlife sunlife sunlife sunlife sunlife sunlife`,
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
   `. . balsamiq balsamiq . .`,
@@ -140,7 +140,7 @@ function SponsorShowcase(): ReactElement {
             onMouseLeave={() => setHovered("none")}
           />
           {/* Gold: Sun Life */}
-          <SponsorItem
+          {/* <SponsorItem
             imgUrl={`${imgPath}/sunlife.png`}
             sponsorUrl="https://www.sunlife.ca/en/"
             gridArea="sunlife"
@@ -148,7 +148,7 @@ function SponsorShowcase(): ReactElement {
             faded={shouldFadeMonetary("sunlife")}
             onMouseEnter={() => setHovered("sunlife")}
             onMouseLeave={() => setHovered("none")}
-          />
+          /> */}
           {/* Silver: ADGA */}
           <SponsorItem
             imgUrl={`${imgPath}/adga.png`}
