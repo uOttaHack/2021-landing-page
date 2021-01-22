@@ -15,8 +15,8 @@ const sponsorsWideGrid = toGridTemplate([
   `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
   `. . sunlife sunlife . .`,
   `adga adga ciena ciena morgan morgan`,
-  `. balsamiq balsamiq onepassword onepassword .`,
-  `. voiceflow voiceflow wolfram wolfram .`,
+  `balsamiq  balsamiq voiceflow voiceflow onepassword onepassword`,
+  `. wolfram wolfram thecodex thecodex .`,
 ]);
 
 const sponsorsThinGrid = toGridTemplate([
@@ -29,8 +29,8 @@ const sponsorsThinGrid = toGridTemplate([
   `sunlife sunlife sunlife sunlife sunlife sunlife`,
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
-  `. balsamiq balsamiq onepassword onepassword .`,
-  `. voiceflow voiceflow wolfram wolfram .`,
+  `balsamiq  balsamiq voiceflow voiceflow onepassword onepassword`,
+  `. wolfram wolfram thecodex thecodex .`,
 ]);
 
 const communityWideGrid = toGridTemplate([`mlh github uottawa decode`]);
@@ -216,6 +216,16 @@ function SponsorShowcase(): ReactElement {
             width={["75%", "65%", "45%"]}
             faded={shouldFadeMonetary("wolfram")}
             onMouseEnter={() => setHovered("wolfram")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* Bronze: TheCodex */}
+          <SponsorItem
+            imgUrl={`${imgPath}/thecodex.png`}
+            sponsorUrl="https://thecodex.me/"
+            gridArea="thecodex"
+            width={["75%", "65%", "45%"]}
+            faded={shouldFadeMonetary("thecodex")}
+            onMouseEnter={() => setHovered("thecodex")}
             onMouseLeave={() => setHovered("none")}
           />
         </Grid>
