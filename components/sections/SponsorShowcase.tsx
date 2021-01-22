@@ -31,8 +31,8 @@ const sponsorsThinGrid = toGridTemplate([
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
   `. . balsamiq balsamiq . .`,
-  `voiceflow voiceflow . . onepassword onepassword`,
-  `. wolfram wolfram thecodex thecodex .`,
+  `voiceflow voiceflow wolfram wolfram onepassword onepassword`,
+  `. . thecodex thecodex . .`,
 ]);
 
 const communityWideGrid = toGridTemplate([`mlh github uottawa decode`]);
