@@ -56,6 +56,7 @@ function Hero(): ReactElement {
                 <BodyAuto paddingTop={4}>
                   MLH Member Event · Hosted Virtually Worldwide
                 </BodyAuto>
+                <BodyAuto paddingTop={4}>Applications due January 22</BodyAuto>
                 <Flex
                   w="max-content"
                   marginTop={[12, 12, 16]}
