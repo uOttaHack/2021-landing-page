@@ -31,7 +31,7 @@ const sponsorsThinGrid = toGridTemplate([
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
   `. . balsamiq balsamiq . .`,
-  `voiceflow voiceflow wolfram wolfram onepassword onepassword`,
+  `voiceflow voiceflow onepassword onepassword wolfram wolfram`,
   `. . thecodex thecodex . .`,
 ]);
 
@@ -220,7 +220,7 @@ function SponsorShowcase(): ReactElement {
             onMouseEnter={() => setHovered("wolfram")}
             onMouseLeave={() => setHovered("none")}
           />
-          {/* Bronze: TheCodex */}
+          {/* In-kind: TheCodex */}
           <SponsorItem
             imgUrl={`${imgPath}/thecodex.png`}
             sponsorUrl="https://thecodex.me/"
