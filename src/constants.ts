@@ -14,12 +14,14 @@ export const styles = {
 export enum LocationHashEnum {
   About = "about",
   Sponsors = "sponsors",
+  Challenges = "challenges",
   FAQ = "faq",
 }
 
 export const locations: { href: string; label: string }[] = [
   { href: `#${LocationHashEnum.About}`, label: "About" },
   { href: `#${LocationHashEnum.Sponsors}`, label: "Sponsors" },
+  { href: `#${LocationHashEnum.Challenges}`, label: "Challenges" },
   { href: `#${LocationHashEnum.FAQ}`, label: "FAQ" },
 ];
 

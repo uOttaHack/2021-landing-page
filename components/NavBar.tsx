@@ -77,7 +77,7 @@ function NavBar(): ReactElement {
               <Stack
                 display={["none", "none", "block", "block"]}
                 direction="row"
-                spacing={[0, 0, "65px", "80px", "150px"]}
+                spacing={[0, 0, "52px", "72px", "112px"]}
               >
                 {locations.map(({ href, label }) => (
                   <NavItem key={href} display="inline">
