@@ -12,7 +12,13 @@ function FAQ(): ReactElement {
   return (
     <div id={LocationHashEnum.FAQ}>
       <Wrapper>
-        <Box marginTop={styles.sectionTopMargin}>
+        <Box
+          marginTop={[
+            styles.sectionTopMargin,
+            styles.sectionTopMargin,
+            "2.2in",
+          ]}
+        >
           <HeadlineAuto marginBottom="40px">
             Frequently Asked
             <br />

@@ -8,6 +8,7 @@ import TeamMessage from "@/components/sections/TeamMessage";
 import About from "@/components/sections/About";
 import SponsorShowcase from "@/components/sections/SponsorShowcase";
 import SponsorEvent from "@/components/sections/SponsorEvent";
+import Challenges from "@/components/sections/Challenges";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
 
@@ -23,13 +24,14 @@ function IndexPage(): ReactElement {
       </Head>
 
       <main>
-        <Box>
+        <Box overflow="hidden">
           <NavBar />
           <Hero />
           <TeamMessage />
           <About />
           <SponsorEvent />
           <SponsorShowcase />
+          <Challenges />
           <FAQ />
           <Footer />
         </Box>
