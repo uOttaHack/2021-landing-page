@@ -212,10 +212,10 @@ function SponsorShowcase(): ReactElement {
           />
           {/* In-kind: Wolfram */}
           <SponsorItem
-            imgUrl={`${imgPath}/wolfram.png`}
+            imgUrl={`${imgPath}/wolfram.svg`}
             sponsorUrl="https://www.wolfram.com/"
             gridArea="wolfram"
-            width={["75%", "65%", "45%"]}
+            width={["50%", "50%", "35%"]}
             faded={shouldFadeMonetary("wolfram")}
             onMouseEnter={() => setHovered("wolfram")}
             onMouseLeave={() => setHovered("none")}
