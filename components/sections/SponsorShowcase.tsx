@@ -13,11 +13,11 @@ const toGridTemplate = (rows: string[]) =>
 const sponsorsWideGrid = toGridTemplate([
   `deloitte deloitte innovapost innovapost solace solace`,
   `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
-  // `. . sunlife sunlife . .`,
+  `. . sunlife sunlife . .`,
   `adga adga ciena ciena morgan morgan`,
-  `. . balsamiq balsamiq . .`,
+  `. balsamiq balsamiq nokia nokia .`,
   `voiceflow voiceflow onepassword onepassword wolfram wolfram`,
-  `. . thecodex thecodex . .`,
+  `. thecodex thecodex echoar echoar .`,
 ]);
 
 const sponsorsThinGrid = toGridTemplate([
@@ -30,9 +30,9 @@ const sponsorsThinGrid = toGridTemplate([
   `sunlife sunlife sunlife sunlife sunlife sunlife`,
   `adga adga . . ciena ciena`,
   `. . morgan morgan . .`,
-  `. . balsamiq balsamiq . .`,
+  `. balsamiq balsamiq nokia nokia .`,
   `voiceflow voiceflow onepassword onepassword wolfram wolfram`,
-  `. . thecodex thecodex . .`,
+  `. thecodex thecodex echoar echoar .`,
 ]);
 
 const communityWideGrid = toGridTemplate([`mlh github uottawa decode`]);
@@ -183,11 +183,21 @@ function SponsorShowcase(): ReactElement {
           {/* Bronze: Balsamiq */}
           <SponsorItem
             imgUrl={`${imgPath}/balsamiq.png`}
-            sponsorUrl="https://balsamiq.com"
+            sponsorUrl="https://www.balsamiq.com"
             gridArea="balsamiq"
             width={["60%", "60%", "30%"]}
             faded={shouldFadeMonetary("balsamiq")}
             onMouseEnter={() => setHovered("balsamiq")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* Bronze: Nokia */}
+          <SponsorItem
+            imgUrl={`${imgPath}/nokia.png`}
+            sponsorUrl="https://www.nokia.com"
+            gridArea="nokia"
+            width={["60%", "60%", "30%"]}
+            faded={shouldFadeMonetary("nokia")}
+            onMouseEnter={() => setHovered("nokia")}
             onMouseLeave={() => setHovered("none")}
           />
           {/* In-kind: Voiceflow */}
@@ -228,6 +238,16 @@ function SponsorShowcase(): ReactElement {
             width={["75%", "65%", "45%"]}
             faded={shouldFadeMonetary("thecodex")}
             onMouseEnter={() => setHovered("thecodex")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* In-kind: EchoAR */}
+          <SponsorItem
+            imgUrl={`${imgPath}/echoar.png`}
+            sponsorUrl="https://www.echoar.xyz/"
+            gridArea="echoar"
+            width={["75%", "65%", "45%"]}
+            faded={shouldFadeMonetary("echoar")}
+            onMouseEnter={() => setHovered("echoar")}
             onMouseLeave={() => setHovered("none")}
           />
         </Grid>
