@@ -15,6 +15,7 @@ const sponsorsWideGrid = toGridTemplate([
   `cdw cdw kanatanorthbia kanatanorthbia ssc ssc`,
   `. . sunlife sunlife . .`,
   `adga adga ciena ciena morgan morgan`,
+  `. . phreesia phreesia . .`,
   `. balsamiq balsamiq nokia nokia .`,
   `voiceflow voiceflow onepassword onepassword wolfram wolfram`,
   `. thecodex thecodex echoar echoar .`,
@@ -29,7 +30,7 @@ const sponsorsThinGrid = toGridTemplate([
   `ssc ssc ssc ssc ssc ssc`,
   `sunlife sunlife sunlife sunlife sunlife sunlife`,
   `adga adga . . ciena ciena`,
-  `. . morgan morgan . .`,
+  `morgan morgan . . phreesia phreesia`,
   `. balsamiq balsamiq nokia nokia .`,
   `voiceflow voiceflow onepassword onepassword wolfram wolfram`,
   `. thecodex thecodex echoar echoar .`,
@@ -178,6 +179,16 @@ function SponsorShowcase(): ReactElement {
             width={["100%", "100%", "50%"]}
             faded={shouldFadeMonetary("morgan")}
             onMouseEnter={() => setHovered("morgan")}
+            onMouseLeave={() => setHovered("none")}
+          />
+          {/* Silver: Phreesia */}
+          <SponsorItem
+            imgUrl={`${imgPath}/phreesia.svg`}
+            sponsorUrl="https://www.phreesia.com/"
+            gridArea="phreesia"
+            width={["100%", "100%", "50%"]}
+            faded={shouldFadeMonetary("phreesia")}
+            onMouseEnter={() => setHovered("phreesia")}
             onMouseLeave={() => setHovered("none")}
           />
           {/* Bronze: Balsamiq */}
