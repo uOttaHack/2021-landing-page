@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { BodyAuto, Headline3, Link } from "@/components/core/Text";
 import { CTAButton } from "@/components/core/Button";
 import { styles } from "@/src/constants";
-import { Box, Flex } from "@chakra-ui/core";
+import { Box, Flex, Icon } from "@chakra-ui/core";
 import Decoration from "@/components/Decoration";
 import Wrapper from "@/components/Wrapper";
 import Lottie from "react-lottie";
@@ -19,6 +19,12 @@ const lottieOptions = {
     preserveAspectRatio: "xMidYMid slice",
   },
 };
+
+const RightArrowIcon = () => (
+  <Flex size="14px" align="center" marginLeft="8px" overflow="visible">
+    <Icon name="arrow-forward" size="24px" />
+  </Flex>
+);
 
 function Hero(): ReactElement {
   return (
@@ -55,7 +61,14 @@ function Hero(): ReactElement {
                   flexDirection={["column", "column", "row", "row"]}
                   alignItems={["flex-start", "flex-start", "center"]}
                 >
-                  <CTAButton>Applications Closed</CTAButton>
+                  <Link
+                    href="https://uottahack-4.devpost.com/project-gallery"
+                    isExternal
+                  >
+                    <CTAButton rightIcon={RightArrowIcon}>
+                      View Projects
+                    </CTAButton>
+                  </Link>
                   <Link
                     href="mailto:sponsorship@uottahack.ca"
                     marginLeft={[0, 0, 8]}
